@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gameflix | Pagina de Login / HTML CSS JS</title>
+  <link rel="shortcut icon" href="../static/img/favicon.ico">
+  <link rel="stylesheet" href="../static/css/login-styles.css">
+</head>
+
+<body>
+  <div className="Login">
+    <form action="action_page.php" method="post">
+      <div class="logomarca">
+        <img src="/static/img/logomarca.png" alt="Logomarca Gameflix">
+      </div>
+
+      <div class="LoginBox">
+        <div class="LoginInfo">
+          <label for="uname"><b>Usuário</b></label>
+          <input type="text" placeholder="E-mail ou nome de usuário" name="user_name" required>
+
+          <label for="psw"><b>Senha</b></label>
+          <input type="password" placeholder="Senha" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="lembrar"> Lembrar-me
+        </label>
+      </div>
+    </form>
+    <div id=voltar>
+      <a href="https://www.link de exemplo/"><img src="/static/img/voltar.png"
+          alt="Ícone de redirecionamento para pagina inicial"></a>
+    </div>
+
+    <div class="helpLinks">
+      <li><a href="https://www.link de exemplo/">Não tem uma conta?</br>
+          Crie uma Conta GameFlix!</a></li>
+      </br></br>
+      <li><a href="https://www.link de exemplo/">Não consegue logar? </a></li>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

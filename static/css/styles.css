@@ -3,17 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Cor Padrão do Backgroud */
 body {
   background-color: #0d1117;
 }
 
+/* Inicio da Estilização da pagina de Login */
 /* Logomarca do topo - alinhamento e tamanho  */
 .logomarca img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 250px;
+  width: 150px;
   margin: 40px auto;
 }
 
@@ -53,6 +55,7 @@ input[type=password] {
 
   width: 30%;
 }
+
 /* Estilização ao passar o mouse sobre os botões da caixa central principal */
 .LoginBox button:hover {
   opacity: 0.7;
@@ -68,19 +71,6 @@ input[type=password] {
 
 }
 
-
-
-/* Estilização de botões abaixo da caixa central principal */
-#voltar {
-  margin-left: 33%;
-  flex-direction: row;
-  align-items: center;
-  border: none;
-}
-
-#voltar img {
-  width: 100px;
-}
 
 /* Estilização do campo de ajuda, abaixo da caixa principal */
 .helpLinks li a {
@@ -108,9 +98,10 @@ input[type=password] {
   font-weight: 600;
   margin-left: auto;
   margin-right: auto;
-
+  padding-top: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
+/* Fim da Estilização da pagina de Login */

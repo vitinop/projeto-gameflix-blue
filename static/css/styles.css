@@ -12,11 +12,11 @@ body {
 /* Inicio da Estilização da pagina de Login */
 /* Logomarca do topo - alinhamento e tamanho  */
 .logomarca img {
+  padding-top: 8rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 130px;
-  margin: 40px auto;
 }
 
 /* Determinar qual tipo de dado entrará na formBox e formatação da mesma */
@@ -32,7 +32,7 @@ input[type=password] {
 
 /* Estilização da caixa central principal */
 .LoginBox {
-
+  padding-top: 2rem;
   margin-left: auto;
   margin-right: auto;
   color: #F1F1F2;
@@ -61,10 +61,11 @@ input[type=password] {
 }
 
 /* Estilização da caixa central secundaria*/
+
 .LoginInfo {
 
   border: #f5f5f5;
-  color: #f5f5f5;
+  
   padding: 3%;
   justify-content: space-around;
   margin-left: auto;

@@ -62,8 +62,8 @@ input[type=password] {
 
 /* Estilização da caixa central secundaria*/
 .LoginInfo {
-  
-  border:#f5f5f5;
+
+  border: #f5f5f5;
   color: #f5f5f5;
   padding: 3%;
   justify-content: space-around;
@@ -73,8 +73,6 @@ input[type=password] {
   border-radius: 4px;
 
 }
-
-
 
 /* Estilização do campo de ajuda, abaixo da caixa principal */
 .helpLinks li a {
@@ -108,4 +106,5 @@ input[type=password] {
   align-items: center;
   justify-content: space-evenly;
 }
+
 /* Fim da Estilização da pagina de Login */

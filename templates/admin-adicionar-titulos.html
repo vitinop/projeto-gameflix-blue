@@ -12,19 +12,22 @@
 
 <body>
   <div class="logomarca">
-    <img src="/static/img/logomarca.png" alt="Logomarca Gameflix">
+    <img src="/static/img/logomarca.svg" alt="Logomarca Gameflix">
   </div>
 
   <div class="caixasAdicionarJogo">
-      <input type="text" placeholder="Nome do título" name="game_name" required>
-      <input type="text" placeholder="Descrição" name="game_description" required>
-      <input type="text" placeholder="Nota Metacritic" name="game_grade" required>
-      <input type="text" placeholder="Classificação Indicativa" name="game_parental_rating" required>
-      <input type="text" placeholder="Gênero" name="game_type" required>
-      <input type="text" placeholder="Ano de Lançamento" name="game_release" required>
-      <input type="text" placeholder="Produtora" name="game_producer" required>
-      <input type="text" placeholder="URL do Trailer" name="game_trailer" required>
-      <button type="submit">Adicinar Título</button>
+      <input type="text" placeholder="Nome do título" name="game_name" required id="game_name">
+      <input type="text" placeholder="Descrição" name="game_description" required id="game_description">
+      <input type="text" placeholder="Nota Metacritic" name="game_grade" required id="game_grade">
+      <input type="text" placeholder="Classificação Indicativa" name="game_parental_rating" required id="game_parental_rating">
+      <input type="text" placeholder="Gênero" name="game_type" required id="game_type">
+      <input type="text" placeholder="Ano de Lançamento" name="game_release" required id="game_release">
+      <input type="text" placeholder="Produtora" name="game_producer" required id="game_producer">
+      <input type="text" placeholder="URL do Trailer" name="game_trailer" required id="game_trailer">
+      <label class="input-group-text" for="logo_marca">Upload de logo</label>
+      <input type="file" id="logo_marca">
+      <label class="input-group-text" for="capa">Upload de capa</label>
+      <input type="file" id="capa">
   </div>
 
 </body>

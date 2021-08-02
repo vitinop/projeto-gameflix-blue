@@ -132,3 +132,7 @@ body {
   color: #f5f5f5;
   background-color: transparent
 }
+
+/*  Inicio da estilização da pagina home */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

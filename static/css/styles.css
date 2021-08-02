@@ -6,8 +6,14 @@
 }
 
 /* footer section */
+.list-inline-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .footer-basic{
-  padding:70px 0;
+  height:5%;
+  padding:1rem;
   background-color: #0a5071;
   color:#f5f5f5;
 }
@@ -31,12 +37,10 @@
   opacity: 1;
 }
 #imgpos{
-  position:absolute;
-  left:70px;
-  top:90px;
-  margin-left:990px;
-  margin-top:1040px;
-  display:block;
+  display: flex;
+  align-items:center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer-basic .copyright {
   margin-top:15px;
@@ -45,6 +49,7 @@
   color:#aaa;
   margin-bottom:0;
 }
+/* fim da footer section */
 /* Cor Padrão do Backgroud */
 body {
   background-color: #0d1117;

@@ -19,22 +19,36 @@
     <img src="/static/img/logomarca.svg" alt="Logomarca Gameflix">
   </div>
 
-  <div class="caixasAdicionarJogo">
+  <div class="infoJogo">
     <input type="text" placeholder="Nome do título" name="game_name" required id="game_name">
     <input type="text" placeholder="Descrição" name="game_description" required id="game_description">
     <input type="text" placeholder="Nota Metacritic" name="game_grade" required id="game_grade">
-    <input type="text" placeholder="Classificação Indicativa" name="game_parental_rating" required
-      id="game_parental_rating">
+    <select name="game_parental_rating" id="game_parental_rating">
+      <option>Classificação Indicativa</option>
+      <option value="18">Não recomendado para menores de 18 anos</option>
+      <option value="16">Não recomendado para menores de 16 anos</option>
+      <option value="16">Não recomendado para menores de 14 anos</option>
+      <option value="12">Não recomendado para menores de 12 anos</option>
+      <option value="10">Não recomendado para menores de 10 anos</option>
+      <option value="0">Não recomendado para menores de Livre </option>
+    </select>
     <input type="text" placeholder="Gênero" name="game_type" required id="game_type">
-    <input type="text" placeholder="Ano de Lançamento" name="game_release" required id="game_release">
+    <select name="game_release"id="game_release">
+      <option>Ano de lançamento</option>
+      <option value="2020">2020</option>
+    </select>
     <input type="text" placeholder="Produtora" name="game_producer" required id="game_producer">
+  </div>
+  
+  <div class="midiaJogo">
     <input type="text" placeholder="URL do Trailer" name="game_trailer" required id="game_trailer">
     <label class="input-group-text" for="logo_marca">Upload de logo</label>
     <input type="file" id="logo_marca">
     <label class="input-group-text" for="capa">Upload de capa</label>
     <input type="file" id="capa">
-    <button type="submit">Adicionar Título ao catálogo</button>
   </div>
+  <button type="submit">Adicionar Título ao catálogo</button>
+  
 
   <div id="foot">
   </div>

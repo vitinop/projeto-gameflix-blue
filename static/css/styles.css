@@ -1,4 +1,8 @@
+:root{
+  --primary-color:#0d1117;
+}
 * {
+  font-weight:bold;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -6,7 +10,7 @@
 }
 
 body {
-  background-color: #0d1117;
+  background-color: var(--primary-color);
 }
 
 /*Header/Nav Section - Padrão*/
@@ -70,9 +74,11 @@ nav ol li:hover a {
   background-color: #22a6b3;
   padding-right: 40px;
   color:#fff;
+  
 }
 .input-search::placeholder{
-  color:rgba(255,255,255,.5);
+  color:black;
+  font-weight:bold;
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;
@@ -90,22 +96,25 @@ nav ol li:hover a {
   border-radius: 50%;
   position: absolute;
   right: 0px;
-  color:#ffffff ;
+  color:black;
   background-color:transparent;
   pointer-events: painted;  
 }
 .btn-search:focus ~ .input-search{
-  
+  background-color:#cbd4e2;
   width: 25rem;
   border-radius: 0px;
-  background-color: transparent;
+  color:black ;
+  font-weight:bold;
   border-bottom:1px solid rgba(255,255,255,.5);
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
 .input-search:focus{
-  width: 300px;
+  color:black ;
+  font-weight:bold;
+  background-color: #cbd4e2;
+  width: 25rem;
   border-radius: 0px;
-  background-color: transparent;
   border-bottom:1px solid rgba(255,255,255,.5);
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
@@ -122,7 +131,7 @@ nav ol li:hover a {
 .footer-basic {
   height: 5%;
   padding: 1rem;
-  background-color: #0a5071;
+  
   color: #f5f5f5;
   font-weight: bold;
 }
@@ -206,7 +215,7 @@ nav ol li:hover a {
   font-size: 1.1rem;
   font-weight: bold;
   color: #f5f5f5;
-  background-color: transparent
+  background-color: transparent;
 }
 
 /* Estilização da caixa central principal */
@@ -258,9 +267,9 @@ nav ol li:hover a {
 }
 
 .helpLinks li a:hover {
+  transition: color 1s;
   text-transform: uppercase;
   color: #f30000;
-  transition: color 1s;
   font-size: 16px;
 }
 
@@ -304,7 +313,7 @@ nav ol li:hover a {
   font-size: 1.1rem;
   font-weight: bold;
   color: #f5f5f5;
-  background-color: transparent
+  background-color: transparent;
 }
 
 /*  Inicio da estilização da pagina home */

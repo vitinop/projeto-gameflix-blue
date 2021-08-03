@@ -14,7 +14,7 @@ body {
   background-color: var(--primary-color);
 }
 
-/*Header/Nav Section - Padrão*/
+/*Inicio Header/Nav Section - Padrão*/
 nav {
   display: flex;
   font-weight: bold;
@@ -131,7 +131,8 @@ nav ol li:hover a {
 
 /*Fim da Header/Nav Section/
 
-/* Footer section - Padrão */
+
+/*Inicio Footer section - Padrão */
 .list-inline-footer {
   display: flex;
   align-items: center;
@@ -202,7 +203,7 @@ nav ol li:hover a {
   margin-bottom: 0;
 }
 
-/* fim da footer section */
+/* Fim da footer section */
 
 /* Inicio da Estilização da pagina de Login */
 /* Logomarca do topo - alinhamento e tamanho  */

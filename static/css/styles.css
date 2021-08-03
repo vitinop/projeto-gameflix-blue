@@ -4,12 +4,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #0d1117;
 }
+
 /*Header/Nav Section - Padrão*/
-nav{
+nav {
   display: flex;
+  font-weight: bold;
   width: 100%;
   background: #0a5071;
   position: relative;
@@ -17,72 +20,94 @@ nav{
   text-align: center;
   padding: 0.5rem 1rem;
 }
-nav ol{
-  display:flex;
-  list-style:none;
+nav img {
+  height: 2rem;
+  margin-right: 1.5rem;
+}
+nav ol {
+  display: flex;
+  list-style: none;
   margin: auto 0;
 }
-nav ol li{
+
+nav ol li {
   margin: 0 2px;
 }
-nav ol li a{
+
+nav ol li a {
   color: #f5f5f5;
-  font-size:20px;
+  font-size: 20px;
   text-decoration: none;
   text-transform: capitalize;
-  letter-spacing:1px;
+  letter-spacing: 1px;
   padding: 5px 10px;
 }
-nav ol li:hover a{
+
+nav ol li:hover a {
   background: coral;
   color: #0a5071;
 }
-nav .search_box{
-  margin-left: auto;
-  display:flex;
-  height: 2rem;
-  line-height: 2rem;
-}
-nav .search_box input{
-  border:none;
-  outline:none;
-  background:#f5f5f5;
-  height:100%;
-  padding: 0 10px;
-  font-size: 20px;
-  width:350px;
-}
-nav .search_box span{
-  color: #0a5071;
-  font-size:20px;
-  background: #f5f5f5;
-  height:100%;
-  padding: 8px;
+/* Estilização de Search Box do header*/
+.search-box{
+  width: fit-content;
+  height: fit-content;
   position: relative;
+  margin-left: auto;
+}
+.input-search{
+  
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #22a6b3;
+  padding-right: 40px;
+  color:#fff;
+}
+.input-search::placeholder{
+  color:rgba(255,255,255,.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  padding-top: 0.65rem;
+  width: 40px;
+  height: 40px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
   cursor: pointer;
-  z-index: 1;
-}
-nav .search_box span:hover{
-  color:#f5f5f5;
-}
-nav .search_box span::after{
-  height: 100%;
-  width:0%;
-  content: '';
-  background:coral;
+  border-radius: 50%;
   position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  transition: 0.3s;
+  right: 0px;
+  color:#ffffff ;
+  background-color:transparent;
+  pointer-events: painted;  
 }
-nav .search_box span:hover::after{
-  width:100%
+.btn-search:focus ~ .input-search{
+  width: 25rem;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
-nav img{
- height: 2rem;
- margin-right: 1.5rem;
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
+
+/*Fim da Header/Nav Section/
+
 /* Footer section - Padrão */
 .list-inline-footer {
   display: flex;
@@ -92,24 +117,26 @@ nav img{
 
 .footer-basic {
   height: 5%;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: #0a5071;
   color: #f5f5f5;
+  font-weight: bold;
 }
-.footer-basic hr{
-  border:none;
+
+.footer-basic hr {
+  border: none;
   height: 20px;
- 	width: 90%;
-	height: 50px;
-	margin-top: 0;
-	border-bottom: 1px transparent #1f1209;
-	box-shadow: 0 20px 20px -20px #333;
-  margin: -50px auto 10px; 
+  width: 90%;
+  height: 50px;
+  margin-top: 0;
+  border-bottom: 1px transparent #1f1209;
+  box-shadow: 0 20px 20px -20px #333;
+  margin: -50px auto 10px;
 }
 
 .footer-basic ul {
-  
-  
+
+
   padding: 0;
   list-style: none;
   text-align: center;
@@ -119,7 +146,7 @@ nav img{
 }
 
 .footer-basic li {
-  
+
   padding: 0 10px;
 }
 
@@ -180,7 +207,7 @@ nav img{
 
 /* Estilização da caixa central principal */
 .LoginBox {
-
+  font-weight: bold;
   margin-left: auto;
   margin-right: auto;
   color: #F1F1F2;
@@ -192,7 +219,7 @@ nav img{
 
 /* Estilização dos botões da caixa central principal */
 .LoginBox button {
-
+  font-weight: bold;
   background-color: #04AA6D;
   color: white;
   padding: 14px 20px;
@@ -243,7 +270,7 @@ nav img{
   font-weight: 600;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 7.4rem;
   padding-top: 1%;
   display: flex;
   flex-direction: column;

@@ -14,14 +14,15 @@ nav {
   display: flex;
   font-weight: bold;
   width: 100%;
-  background: #0a5071;
   position: relative;
   justify-content: flex-start;
   text-align: center;
   padding: 0.5rem 1rem;
 }
 nav img {
-  height: 2rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 2.5rem;
   margin-right: 1.5rem;
 }
 nav ol {
@@ -44,8 +45,9 @@ nav ol li a {
 }
 
 nav ol li:hover a {
-  background: coral;
-  color: #0a5071;
+  text-transform:scale(1.2);
+  background: #f30000;
+  
 }
 /* Estilização de Search Box do header*/
 .search-box{
@@ -76,7 +78,8 @@ nav ol li:hover a {
   font-weight: 100;
 }
 .btn-search{
-  padding-top: 0.65rem;
+  padding-top: 0.45rem;
+  padding-right: 2.8rem;
   width: 40px;
   height: 40px;
   border-style: none;
@@ -92,6 +95,7 @@ nav ol li:hover a {
   pointer-events: painted;  
 }
 .btn-search:focus ~ .input-search{
+  
   width: 25rem;
   border-radius: 0px;
   background-color: transparent;

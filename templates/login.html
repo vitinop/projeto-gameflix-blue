@@ -13,62 +13,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
 </head>
 
-<!--HEADER CONTENT-->
-<nav>
-  <img src="../static/img/logomarca-2.svg">
-  <ol>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Meus Jogos</a></li>
-    <li><a href="#">Todos os Jogos</a></li>
-  </ol>
-  <div class="search-box">
-    <button class="btn-search"><i class="fas fa-search"> <img src="/static/img/lupa.png"></i></button>
-    <input type="text" class="input-search" placeholder="Type to Search...">
+<body>
+  <div id="nav">
   </div>
-</nav>
 
-<div className="Login">
-  <form action="action_page.php" method="post">
-    <div class="logomarca">
-      <img src="/static/img/logomarca.svg" alt="Logomarca Gameflix">
-    </div>
-
-    <div class="LoginBox">
-      <div class="LoginInfo">
-        <input type="text" placeholder="E-mail ou nome de usuário" name="user_name" required>
-        <input type="password" placeholder="Senha" name="password" required>
+  <div className="Login">
+    <form action="action_page.php" method="post">
+      <div class="logomarca">
+        <img src="/static/img/logomarca.svg" alt="Logomarca Gameflix">
       </div>
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="lembrar"> Lembrar-me
-      </label>
-      <br><br><br>
-      <hr>
-    </div>
 
-  </form>
-  <div class="helpLinks">
-    <li><a href="https://www.link de exemplo/">Não tem uma conta ?</br>
-        Crie uma Conta GameFlix !</a></li>
-    </br></br>
-    <li><a href="https://www.link de exemplo/">Não consegue logar ? </a></li>
+      <div class="LoginBox">
+        <div class="LoginInfo">
+          <input type="text" placeholder="E-mail ou nome de usuário" name="user_name" required>
+          <input type="password" placeholder="Senha" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="lembrar"> Lembrar-me
+        </label>
+        <br><br><br>
+        <hr>
+      </div>
+
+    </form>
+    <div class="helpLinks">
+      <li><a href="https://www.link de exemplo/">Não tem uma conta ?</br>
+          Crie uma Conta GameFlix !</a></li>
+      </br></br>
+      <li><a href="https://www.link de exemplo/">Não consegue logar ? </a></li>
+    </div>
   </div>
-</div>
-<!--FOOTER CONTENT-->
-<div class="footer-basic">
-  <footer>
-    <ul class="list-inline-footer">
-      <li class="list-inline-item"><a href="#">Suporte</a></li>
-      <li class="list-inline-item"><a href="#">Sobre</a></li>
-      <li class="list-inline-item"><a href="#">Mapa do Site</a></li>
-      <li class="list-inline-item"><a href="#">Termos de Uso</a></li>
-    </ul>
-    <hr>
-    <p class="copyright">©2021 GAMEFLIX, INC. TODOS OS DIREITOS RESERVADOS.<br>Todas as marcas registradas mencionadas
-      são de propriedade de seus respectivos donos.</p>
-  </footer>
-</div>
+
+  <div id="foot">
+  </div>
 
 </body>
+<script src="../static/js/script.js">
+
+</script>
 
 </html>

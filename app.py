@@ -30,7 +30,7 @@ class Info_jogos(db.Model):
 
 
     def __init__(self, nomeJogo,descricao, imagemLink, notaMetric, classificacao, genero, dataLancamento, produtora, trailler, logoLink):
-        self.nome= nomeJogo
+        self.nomeJogo= nomeJogo
         self.descricao = descricao
         self.imagemLink = imagemLink
         self.notaMetric = notaMetric

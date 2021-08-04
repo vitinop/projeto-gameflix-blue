@@ -12,11 +12,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
 
 <body>
-  <div id="nav">
+  <!--HEADER CONTENT-->
+  <div id="nav"></div>
+  <div class="logomarca">
+    <img src="/static/img/logomarca.svg" alt="Logomarca Gameflix">
   </div>
-  {% include 'header.html' %}
 
-  <br>
+  <!--MAIN CONTENT-->
   <table class="tabela">
     <tr class="tabela_header">
       <th>ID</th>
@@ -56,20 +58,26 @@
 
   </table>
 
+
   <br>
-  <div class="bloco">
+  <div class="blocoDeAcao">
     <a href="/read" class="botao">VISUALIZAR</a>
     <a href="/update" class="botao">EDITAR</a>
     <a href="/delete" class="botao">REMOVER</a>
+    <div id=checkboxDisponibilidade>
+      <p>DISPONIBILIDADE</p>
+      <form>
+        <input type="radio" id="html" name="disponibilidade" value="1">
+        <label for="html">DISPONÍVEL</label><br>
+        <input type="radio" id="css" name="disponibilidade" value="0">
+        <label for="css">NÃO DISPONÍVEL</label><br>
+      </form>
+    </div>
   </div>
-
-
-
-  <div id="foot">
-  </div>
+  <!--FOOTER CONTENT-->
+  <div id="foot"></div>
 </body>
 
-<script src="../static/js/script.js">
-</script>
+<script src="../static/js/script.js"></script>
 
 </html>

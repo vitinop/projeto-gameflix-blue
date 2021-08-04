@@ -362,30 +362,12 @@ nav ol li:hover a {
   height: 50px;
 }
 
-.header{
-  padding-top: 20px;
-}
-
-.bloco{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.bloco h1{
-  color: white;
-  box-shadow: 5px;
-  border-top: 1px solid coral;
-  border-bottom: 1px solid coral;;
-  padding: 10px;
-}
-
 .botao{
   background-color:#f30000;
   border: none;
   border-radius: 10px;
   color: white;
-  display: inline-block;
+  
   padding: 20px;
   margin: 10px;
   font-size: 18px;
@@ -395,7 +377,22 @@ nav ol li:hover a {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.796);
 }
 .botao:hover{
-  
+  opacity: 0.91;
 }
+.blocoDeAcao{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.blocoDeAcao h1{
+  color: white;
+  box-shadow: 5px;
+  border-top: 1px solid coral;
+  border-bottom: 1px solid coral;;
+  padding: 10px;
+}
+
+/* Fim da estilização da pagina gerenciar Jorgos */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

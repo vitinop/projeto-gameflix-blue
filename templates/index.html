@@ -27,54 +27,17 @@
   </nav>
 
   <!--MAIN CONTENT-->
-  <div class="slider">
-    <input type="radio" name="slider" checked="checked">
-    <div class="imgBx">
-      <img src="../static/img/diablo2.jpg">
-      <div class="content">
-        <h2>Diablo II</h2>
-        <p>Lorem ipsum dolor sit amet con la rebet lorem, consectetur adipisicing elit </p>
-        <a href="#">Leia mais</a>
-      </div>
+  <section id="jogos">
+
+    {% for p in jogos %}
+    <div id='card'>
+      
+       <img src= {{p.imagemLink}} alt={{p.nomeJogo}}>
+       <h2>{{p.nomeJogo}}</h2>
+       <a href="{{p.trailler}}" target="_blank">Veja mais</a>
     </div>
-    <input type="radio" name="slider">
-    <div class="imgBx">
-      <img src="../static/img/235072.jpg">
-      <div class="content">
-        <h2>Mobile Legends</h2>
-        <p>Lorem ipsum dolor sit amet con la rebet lorem, consectetur adipisicing elit </p>
-        <a href="#">Leia mais</a>
-      </div>
-    </div>
-    <input type="radio" name="slider">
-    <div class="imgBx">
-      <img src="../static/img/bioshock.jpg">
-      <div class="content">
-        <h2>bioshock</h2>
-        <p>Lorem ipsum dolor sit amet con la rebet lorem, consectetur adipisicing elit </p>
-        <a href="#">Leia mais</a>
-      </div>
-    </div>
-    <input type="radio" name="slider">
-    <div class="imgBx">
-      <img src="../static/img/God-of-War-4.jpg">
-      <div class="content">
-        <h2>God of WAR</h2>
-        <p>Lorem ipsum dolor sit amet con la rebet lorem, consectetur adipisicing elit </p>
-        <a href="#">Leia mais</a>
-      </div>
-    </div>
-    <input type="radio" name="slider">
-    <div class="imgBx">
-      <img src="../static/img/unchated3.jpg">
-      <div class="content">
-        <h2>Uncharted</h2>
-        <p>Lorem ipsum dolor sit amet con la rebet lorem, consectetur adipisicing elit </p>
-        <a href="#">Leia mais</a>
-      </div>
-    </div>
-  </div>
-    
+    {% endfor %}
+ </section>
 
   <!--FOOTER CONTENT-->
   <div class="footer-basic">

@@ -15,7 +15,7 @@ db = SQLAlchemy(app)
 
 class Info_jogos(db.Model):
     id = db.Column(db.Integer, primary_key=True,autoincrement=True)
-    nomeJogo = db.Column(db.String(50),nullable=True)
+    nomeJogo = db.Column(db.String(50),nullable=False)
     descricao = db.Column(db.Text,nullable=False)
     imagemLink = db.Column(db.String(500), nullable=False)
     notaMetric = db.Column(db.Float,nullable=False)

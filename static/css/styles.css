@@ -52,8 +52,14 @@ nav ol li a {
 }
 
 nav ol li:hover a {
-  text-transform: scale(1.2);
-  background: #f30000;
+  background-color:#f30000;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.796);
 
 }
 
@@ -328,5 +334,68 @@ nav ol li:hover a {
 }
 
 /*  Inicio da estilização da pagina home */
+
+
+
+
+/* Inicio da estilização da pagina gerenciar Jorgos */
+
+.tabela{
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  border: 1px solid #FF7F50;
+  border-collapse: collapse;
+  color: white;
+  background:linear-gradient(90deg, rgba(248,221,117,1) 0%, rgba(233,142,80,1) 50%, rgba(202,100,58,1) 100%); 
+}
+
+.tabela td{
+  padding: 10px;
+  border: 1px solid #FF7F50;
+  background-color: #1A1A1A;
+}
+
+.tabela th{
+  padding: 10px;
+  height: 50px;
+}
+
+.header{
+  padding-top: 20px;
+}
+
+.bloco{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.bloco h1{
+  color: white;
+  box-shadow: 5px;
+  border-top: 1px solid coral;
+  border-bottom: 1px solid coral;;
+  padding: 10px;
+}
+
+.botao{
+  background-color:#f30000;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  padding: 20px;
+  margin: 10px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.796);
+}
+.botao:hover{
+  
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

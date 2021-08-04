@@ -10,13 +10,66 @@
   <link rel="stylesheet" href="../static/css/styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+
 <body>
-    <div id="nav">
-    </div>
-    <div id="foot">
-    </div>
+  <div id="nav">
+  </div>
+  {% include 'header.html' %}
+
+  <br>
+  <table class="tabela">
+    <tr class="tabela_header">
+      <th>ID</th>
+      <th>NOME</th>
+      <th>GÊNERO</th>
+      <th>IMAGEM</th>
+      <th>TRAILER</th>
+      <th>ANO DE LANÇAMENTO</th>
+      <th>NOTA</th>
+      <th>CLASSIFICAÇÃO</th>
+      <th>PRODUTORA</th>
+    </tr>
+
+    <tr>
+      <td>teste1</td>
+      <td>teste2</td>
+      <td>teste3</td>
+      <td>teste4</td>
+      <td>teste5</td>
+      <td>teste6</td>
+      <td>teste7</td>
+      <td>teste8</td>
+      <td>teste9</td>
+    </tr>
+
+    <tr>
+      <td>teste1</td>
+      <td>teste2</td>
+      <td>teste3</td>
+      <td>teste4</td>
+      <td>teste5</td>
+      <td>teste6</td>
+      <td>teste7</td>
+      <td>teste8</td>
+      <td>teste9</td>
+    </tr>
+
+  </table>
+
+  <br>
+  <div class="bloco">
+    <a href="/read" class="botao">VISUALIZAR</a>
+    <a href="/update" class="botao">EDITAR</a>
+    <a href="/delete" class="botao">REMOVER</a>
+  </div>
+
+
+
+  <div id="foot">
+  </div>
 </body>
-  
+
 <script src="../static/js/script.js">
 </script>
+
 </html>

@@ -3,11 +3,11 @@ nav.innerHTML =
     `<nav>
     <img src="../static/img/logomarca-2.svg">
     <ol>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Meus Jogos</a></li>
-      <li><a href="#">Todos os Jogos</a></li>
-      <li><a href="#">ADM</a></li>
+    <li><a href="index.html">Home</a></li>
+    
+    <li><a href="login.html">Login</a></li>
     </ol>
+    
     <div class="search-box">
       <button class="btn-search"><i class="fas fa-search"> <img src="/static/img/lupa.png"></i></button>
       <input type="text" class="input-search" placeholder="Type to Search...">

@@ -265,7 +265,6 @@ nav ol li:hover a {
   margin: 2%;
   margin-left: 25%;
   border: none;
-
   width: 30%;
 }
 
@@ -410,6 +409,22 @@ nav ol li:hover a {
 }
 /* Fim da estilização da pagina gerenciar Jorgos */
 
+
+/* Inicio da Estilização do botão da pagina cadastro de jogos */
+#botao-cadastro {
+  align-items: center;
+  font-weight: bold;
+  margin: 2%;
+  margin-left: 40%;
+  color: #F1F1F2;
+  flex-direction: column;
+  width: 20%;
+  background-color: #04AA6D;
+  padding: 14px 20px;
+  border: none;
+
+
+}
 
 
 

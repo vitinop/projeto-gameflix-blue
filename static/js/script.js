@@ -4,6 +4,7 @@ nav.innerHTML =
     <img src="../static/img/logomarca-2.svg">
     <ol>
     <li><a href="index.html">Home</a></li>
+    <li><a href="todos-jogos.html">lista Jogos</a></li>
     
     <li><a href="login.html">Login</a></li>
     </ol>

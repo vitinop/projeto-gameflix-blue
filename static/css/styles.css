@@ -14,6 +14,9 @@ body {
   background-color: var(--primary-color);
 }
 
+
+
+
 /*Inicio Header/Nav Section - Padrão*/
 nav {
   display: flex;
@@ -65,7 +68,6 @@ nav ol li:hover a {
 
 /* Estilização de Search Box do header*/
 .search-box {
-  
   width: fit-content;
   height: fit-content;
   position: relative;
@@ -134,8 +136,10 @@ nav ol li:hover a {
   border-bottom: 1px solid rgba(255, 255, 255, .5);
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
-
 /*Fim da Header/Nav Section/
+
+
+
 
 
 /*Inicio Footer section - Padrão */
@@ -210,6 +214,10 @@ nav ol li:hover a {
 }
 
 /* Fim da footer section */
+
+
+
+
 
 /* Inicio da Estilização da pagina de Login */
 /* Logomarca do topo - alinhamento e tamanho  */
@@ -311,6 +319,9 @@ nav ol li:hover a {
 
 /* Fim da Estilização da pagina de Login */
 
+
+
+
 /* Inicio da Estilização de adicionar novos jogos */
 .infoJogo {
   margin-left: auto;
@@ -332,8 +343,13 @@ nav ol li:hover a {
   color: #f5f5f5;
   background-color: transparent;
 }
+/* Fim da Estilização de adicionar novos jogos */
+
+
+
 
 /*  Inicio da estilização da pagina home */
+
 
 
 
@@ -392,7 +408,14 @@ nav ol li:hover a {
   border-bottom: 1px solid coral;;
   padding: 10px;
 }
-
 /* Fim da estilização da pagina gerenciar Jorgos */
+
+
+
+
+
+
+/* Inicio da Estilização da pagina de delete*/
+/* Fim da Estilização da pagina de delete*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

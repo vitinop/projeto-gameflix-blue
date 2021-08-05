@@ -58,7 +58,7 @@ def new():
         )    
         db.session.add(jogo)
         db.session.commit()
-        return redirect('/')
+        return redirect('/cadastro-jogos.html')
  
 @app.route('/')
 def index():
@@ -69,6 +69,14 @@ def index():
 @app.route('/cadastro-jogos.html')
 def adm_titulos():
     return render_template('cadastro-jogos.html')
+
+@app.route('/delete/<id>') 
+def delete():
+    jogos = Info_jogos.query.get(id)
+    db.session.delete(jogos)
+    db.session.commit()
+    return redirect('/cadastro-jogos')
+
 
 if __name__ == '__main__':
     db.create_all()

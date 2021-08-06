@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');
+
+:root {
+    --colorOne: #141414;
+    --colorTwo: #5c5c5c;
+    --colorWhite: #e5e5e5;
+
+    --tileBorderRadius: 5px;
+
+    --fontOne: 'Poppins', Helvetica, Arial, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 0 2%;
+}
+
+body {
+    font-family: var(--fontOne); 
+    background-color: #0d1117;
+}
+
+/* Banner Image */
+.banner_image{
+    background: url('../img/assassin-s-creed-iv-black-flag-21348-1920x1200.jpg') no-repeat top center;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    overflow: hidden;
+    transform-origin: center center;
+    object-fit: cover;
+}
+
+
+/* sessão dos jogos */
+.thumbSection {
+    padding-top: 4%;
+    color: var(--colorWhite);
+}
+
+.thumbTitle {
+    font-size: 20px;
+    line-height: 14px;
+    font-weight: 500;
+    margin: 0 4% 12px;
+}
+
+.thumbTiles.swiper-container {
+    padding: 0 4%;
+}
+
+.thumbTile {
+    width: 20%;
+}
+
+.thumbTile__image {
+    width: 100%;
+    border-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-prev,
+.thumbTiles .swiper-button-next {
+    height: 100%;
+    width: 4%;
+    width: calc(4% - 5px);
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    background-color: rgba(20, 20, 20, 0.5);
+}
+
+.thumbTiles .swiper-button-prev {
+    left: 0;
+    border-top-right-radius: var(--tileBorderRadius);
+    border-bottom-right-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-next {
+    right: 0;
+    border-top-left-radius: var(--tileBorderRadius);
+    border-bottom-left-radius: var(--tileBorderRadius);
+}
+
+.thumbTiles .swiper-button-prev::after,
+.thumbTiles .swiper-button-next::after {
+    color: #fff;
+    font-size: 4vw;
+    font-weight: bold;
+    transition: transform 0.1s ease-out;
+}
+
+.thumbSection .swiper-wrapper{
+    padding: 30px 0;
+}
+
+.thumbSection .swiper-slide{
+    transition: 250ms all;
+}
+
+.thumbSection .swiper-slide:hover{
+    transform: scale(1.2);
+    z-index:1;
+}
+
+.thumbSection .swiper-slide:first-child:hover{
+    margin: 0 30px;
+}
+
+.thumbSection .swiper-slide:last-child:hover{
+    margin: 0 -30px;
+}
+
+.thumbSection .swiper-slide:nth-child(6):hover{
+    margin: 0 -30px;
+}

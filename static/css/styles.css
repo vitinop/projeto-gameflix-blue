@@ -117,7 +117,7 @@ body {
 
 
 
-/* Inicio da Estilização de adicionar novos jogos */
+/* Inicio da Estilização de Cadastrar novos jogos */
 .infoJogo {
   margin-left: auto;
   margin-right: auto;
@@ -138,13 +138,7 @@ body {
   color: #f5f5f5;
   background-color: transparent;
 }
-/* Fim da Estilização de adicionar novos jogos */
-
-
-
-
-/*  Inicio da estilização da pagina home */
-
+/* Fim da Estilização de Cadastrar novos jogos */
 
 
 
@@ -218,11 +212,5 @@ body {
   
 }
 
-
-
-
-
-/* Inicio da Estilização da pagina de delete*/
-/* Fim da Estilização da pagina de delete*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

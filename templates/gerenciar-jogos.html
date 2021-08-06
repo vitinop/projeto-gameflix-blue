@@ -65,10 +65,10 @@
       <form action="/edit/{{jogosEdit.id}}" method="post">
         <h1>Editar informações</h1>
 
-        <input type="text" placeholder="Nome do título" name="nomeJogo" required id="nomeJogo" value="{{jogosEdit.nomeJogo}}">
-        <input type="text" placeholder="Descrição" name="descricao" required id="descricao" value="{{jogosEdit.descricao}}">
-        <input type="text" placeholder="Nota Metacritic" name="notaMetric" required id="notaMetric" value="{{jogosEdit.notaMetric}}">
-        <select name="classificacao" id="classificacao" value="{{jogosEdit.classificacao}}">
+        <input type="text" placeholder="Nome do título" name="nomeJogo" required id="game_name" value="{{jogosEdit.nomeJogo}}">
+        <input type="text" placeholder="Descrição" name="descricao" required id="game_description" value="{{jogosEdit.descricao}}">
+        <input type="text" placeholder="Nota Metacritic" name="notaMetric" required id="game_grade" value="{{jogosEdit.notaMetric}}">
+        <select name="classificacao" id="game_parental_rating" value="{{jogosEdit.classificacao}}">
         <option>Classificação Indicativa</option>
         <option value="18">Não recomendado para menores de 18 anos</option>
         <option value="16">Não recomendado para menores de 16 anos</option>
@@ -77,16 +77,16 @@
         <option value="10">Não recomendado para menores de 10 anos</option>
         <option value="0">Livre para todos os Públicos </option>
         </select>
-        <input type="text" placeholder="Gênero" name="genero" required id="genero" value="{{jogosEdit.genero}}">
+        <input type="text" placeholder="Gênero" name="genero" required id="game_type" value="{{jogosEdit.genero}}">
         <h4>Ano de lançamento</h4>
-        <input id="dataLancamento" name="dataLancamento" type="number" value="{{jogosEdit.dataLancamento}}">
-        <input type="text" placeholder="Produtora" name="produtora" required id="produtora" value="{{jogosEdit.produtora}}">
+        <input id="ano"type="number" name="dataLancamento" value="{{jogosEdit.dataLancamento}}">
+        <input type="text" placeholder="Produtora" name="produtora" required id="game_producer" value="{{jogosEdit.produtora}}">
         
 
       <div class="infoJogo">
-        <input type="text" placeholder="URL do Trailer" name="trailler" required id="trailler" value="{{jogosEdit.trailler}}">
-        <input type="text" placeholder="URL da Imagem" name="imagemLink" required id="imagemLink" value="{{jogosEdit.imagemLink}}">
-        <input type="text" placeholder="URL da Logo" name="logoLink" required id="logoLink" value="{{jogosEdit.logoLink}}">
+        <input type="text" placeholder="URL do Trailer" name="trailler" required id="game_trailer" value="{{jogosEdit.trailler}}">
+        <input type="text" placeholder="URL da Imagem" name="imagemLink" required id="game_img" value="{{jogosEdit.imagemLink}}">
+        <input type="text" placeholder="URL da Logo" name="logoLink" required id="game_logo" value="{{jogosEdit.logoLink}}">
       </div>
     <div>
       <a href="/gerenciar-jogos.html">Cancelar</a>
@@ -96,13 +96,7 @@
       </form>    
     {% endif %}  
 
-    <!-- <div class="blocoDeAcao">
-      {% for p in jogos %}
-        <a href="/read" class="botao">VISUALIZAR</a>
-        <a href="/update" class="botao">EDITAR</a>
-        <a href="/delete" class="botao">REMOVER</a>
-      {% endfor %}
-  </div> -->
+ 
 
   </table>
 

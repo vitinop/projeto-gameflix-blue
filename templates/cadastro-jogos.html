@@ -22,6 +22,7 @@
 
 
   <!--MAIN CONTENT-->
+  <!--MAIN CONTENT-->
   <form action="/new" method="POST">
     <div class="infoJogo">
       <input type="text" placeholder="Nome do título" name="game_name" required id="game_name">
@@ -29,16 +30,16 @@
       <input type="text" placeholder="Nota Metacritic" name="game_grade" required id="game_grade">
       <select name="game_parental_rating" id="game_parental_rating">
         <option>Classificação Indicativa</option>
-        <option value="18">Não recomendado para menores de 18 anos</option>
-        <option value="16">Não recomendado para menores de 16 anos</option>
-        <option value="16">Não recomendado para menores de 14 anos</option>
-        <option value="12">Não recomendado para menores de 12 anos</option>
-        <option value="10">Não recomendado para menores de 10 anos</option>
-        <option value="0">Livre para todos os Públicos </option>
+        <option value="18" class="clas-18">Não recomendado para menores de 18 anos</option>
+        <option value="16" class="clas-16">Não recomendado para menores de 16 anos</option>
+        <option value="14" class="clas-14">Não recomendado para menores de 14 anos</option>
+        <option value="12" class="clas-12">Não recomendado para menores de 12 anos</option>
+        <option value="10" class="clas-10">Não recomendado para menores de 10 anos</option>
+        <option value="0" class="clas-L">Livre para todos os Públicos </option>
       </select>
       <input type="text" placeholder="Gênero" name="game_type" required id="game_type">
       <h4>Ano de lançamento</h4>
-      <input id="ano"type="number" value="2021">
+      <input id="ano" type="number" value="2021">
       <input type="text" placeholder="Produtora" name="game_producer" required id="game_producer">
     </div>
 

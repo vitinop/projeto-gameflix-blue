@@ -121,7 +121,7 @@ body {
 .infoJogo {
   margin-left: auto;
   margin-right: auto;
-  color: #F1F1F2;
+  color: #f1f2f1;
   flex-direction: column;
   width: 25%;
 }
@@ -131,13 +131,112 @@ body {
   padding: 0.5rem 0.6rem;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(134, 7, 7);
   box-sizing: border-box;
   font-size: 1.1rem;
   font-weight: bold;
   color: #f5f5f5;
   background-color: transparent;
 }
+
+
+.infoJogo input:focus{
+  color:rgb(248, 11, 11);
+  font-size:larger;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.infoJogo select {
+  border: 1px solid rgb(134, 7, 7);
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  margin: 8px 0;
+  background-color: transparent;
+  color:#aaa;
+  height: 50px;
+
+}
+
+.infoJogo select option:focus {
+  color:rgb(134, 7, 7);
+  box-sizing: border-box;
+}
+  
+.clas-L {
+  background-color:#05A53D;
+  color:white;
+} 
+
+.clas-10{
+  background-color:#1abcf6;
+  color:white;
+}
+
+.clas-12{
+  background-color:#fed007;
+  color:white;
+
+}
+
+.clas-14{
+  background-color:#fc4407;
+  color:white;
+}
+
+.clas-16{
+  background-color:#fc0712;
+  color:white;
+}
+
+.clas-18{
+  background-color:black;
+  color:white;
+}
+
+
+.option-2 {
+  border: 1px solid rgb(134, 7, 7);
+  background-color:#04AA6D;
+  color:#aaa;
+}   
+.infoJogo div h4{
+  color:#aaa;
+
+}
+
+#botao-cadastro {
+  align-items: center;
+  font-weight: bold;
+  margin:1%;
+  margin-left: 40%;
+  color: #F1F1F2;
+  flex-direction: column;
+  width: 20%;
+  background-color: red;
+  padding: 14px 20px;
+  border: none;
+  
+}
+
+#botao-cadastro:hover{
+  background-color:#04AA6D
+
+}
+
+#ano{
+  background-color:transparent;
+  color:#aaa;
+}
+
+
+#ano:focus{
+  color:rgb(248, 11, 11);
+  font-size:larger;
+  text-transform: uppercase;
+}
+
+/* Fim da Estilização de adicionar novos jogos */
 /* Fim da Estilização de Cadastrar novos jogos */
 
 

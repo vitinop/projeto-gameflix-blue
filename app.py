@@ -7,12 +7,14 @@ import sqlalchemy
 app = Flask(__name__)
 app.secret_key = 'bluedtech'
 
+#configuração do SQLAlchemy
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://lvuqxbop:NdMagrrxBtguNA5R0ymG2Igafdj6nWPK@tuffi.db.elephantsql.com/lvuqxbop'
+#instanciamento do banco de dados
 db = SQLAlchemy(app)
 
 
 
-
+#criação da classe e criação das colunas do banco de dados
 class Info_jogos(db.Model):
     id = db.Column(db.Integer, primary_key=True,autoincrement=True)
     nomeJogo = db.Column(db.String(50),nullable=False)
@@ -28,7 +30,7 @@ class Info_jogos(db.Model):
 
     
 
-
+    #método construtor com o parâmetros a serem utilizados
     def __init__(self, nomeJogo,descricao, imagemLink, notaMetric, classificacao, genero, dataLancamento, produtora, trailler, logoLink):
         self.nomeJogo= nomeJogo
         self.descricao = descricao
@@ -41,6 +43,7 @@ class Info_jogos(db.Model):
         self.trailler = trailler
         self.logoLink = logoLink 
         
+# criação da rota para inclusão das informações no BD         
 @app.route('/new', methods = ['GET', 'POST'])
 def new():
     if request.method == 'POST':
@@ -59,24 +62,55 @@ def new():
         db.session.add(jogo)
         db.session.commit()
         return redirect('/cadastro-jogos.html')
- 
+
+#criação da rota da página index 
 @app.route('/')
 def index():
     jogos = Info_jogos.query.all()
-    return render_template('index.html', jogos = jogos)
+    return render_template('/index.html', jogos = jogos)
 
 
 @app.route('/cadastro-jogos.html')
 def adm_titulos():
-    return render_template('cadastro-jogos.html')
+    return render_template('/cadastro-jogos.html')
+
+@app.route('/gerenciar-jogos.html')
+def adm_gerenciar_jogos():
+    jogos = Info_jogos.query.all()
+    return render_template('/gerenciar-jogos.html', jogos = jogos)
 
 @app.route('/delete/<id>') 
-def delete():
+def delete(id):
     jogos = Info_jogos.query.get(id)
     db.session.delete(jogos)
     db.session.commit()
-    return redirect('/cadastro-jogos')
+    return redirect('/gerenciar-jogos.html')
 
+#criação da rota para edição dos dados dentro do banco
+@app.route('/edit/<id>', methods = ['POST', 'GET'])
+def edit(id):
+    jogosEdit = Info_jogos.query.get(id)
+    if request.method == 'POST':
+        jogosEdit.nomeJogo = request.form['nomeJogo']
+        jogosEdit.descricao = request.form['descricao']
+        jogosEdit.imagemLink = request.form['imagemLink']
+        jogosEdit.notaMetric = request.form['notaMetric']
+        jogosEdit.classificacao = request.form['classificacao']
+        jogosEdit.genero = request.form['genero']
+        jogosEdit.dataLancamento = request.form['dataLancamento']
+        jogosEdit.produtora = request.form['produtora']
+        jogosEdit.trailler = request.form['trailler']
+        jogosEdit.logoLink = request.form['logoLink']
+        db.session.commit()
+        return redirect('/gerenciar-jogos.html')
+    
+    return render_template('/gerenciar-jogos.html', jogosEdit=jogosEdit)
+
+#rota de exibição dos jogos cadastrados
+@app.route('/todos-jogos.html')
+def todos_jogos():
+    jogos = Info_jogos.query.all()
+    return render_template('/todos-jogos.html', jogos=jogos)
 
 if __name__ == '__main__':
     db.create_all()

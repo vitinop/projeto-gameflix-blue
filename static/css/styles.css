@@ -378,18 +378,18 @@ nav ol li:hover a {
 }
 
 .botao{
-  background-color:#f30000;
+  /* background-color:#f30000; */
   border: none;
   border-radius: 10px;
   color: white;
   
-  padding: 20px;
+  padding: 5px;
   margin: 10px;
   font-size: 18px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.796);
+  /* box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.796); */
 }
 .botao:hover{
   opacity: 0.91;

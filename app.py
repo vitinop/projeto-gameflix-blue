@@ -69,6 +69,10 @@ def index():
     jogos = Info_jogos.query.all()
     return render_template('/index.html', jogos = jogos)
 
+@app.route('/login.html')
+def login():
+    return render_template('/login.html')
+
 
 @app.route('/cadastro-jogos.html')
 def adm_titulos():

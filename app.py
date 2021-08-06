@@ -73,6 +73,9 @@ def index():
 def login():
     return render_template('/login.html')
 
+@app.route('/about.html')
+def about():
+    return render_template('/about.html')
 
 @app.route('/cadastro-jogos.html')
 def adm_titulos():

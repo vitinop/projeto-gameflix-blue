@@ -70,6 +70,11 @@ def index():
 def adm_titulos():
     return render_template('cadastro-jogos.html')
 
+@app.route('/todos-jogos.html')
+def todos_jogos():
+    jogos = Info_jogos.query.all()
+    return render_template('/todos-jogos.html', jogos=jogos)
+
 if __name__ == '__main__':
     db.create_all()
     app.run(debug=True)

@@ -61,7 +61,40 @@
       {% endfor %}
     </tbody>
 
-    
+    {% if jogosEdit != undefined %}
+      <form action="/edit/{{jogosEdit.id}}" method="post">
+        <h1>Editar informações</h1>
+
+        <input type="text" placeholder="Nome do título" name="nomeJogo" required id="game_name" value="{{jogosEdit.nomeJogo}}">
+        <input type="text" placeholder="Descrição" name="game_description" required id="game_description" value="{{jogosEdit.descricao}}">
+        <input type="text" placeholder="Nota Metacritic" name="game_grade" required id="game_grade" value="{{jogosEdit.notaMetric}}">
+        <select name="game_parental_rating" id="game_parental_rating" value="{{jogosEdit.classificacao}}">
+        <option>Classificação Indicativa</option>
+        <option value="18">Não recomendado para menores de 18 anos</option>
+        <option value="16">Não recomendado para menores de 16 anos</option>
+        <option value="16">Não recomendado para menores de 14 anos</option>
+        <option value="12">Não recomendado para menores de 12 anos</option>
+        <option value="10">Não recomendado para menores de 10 anos</option>
+        <option value="0">Livre para todos os Públicos </option>
+        </select>
+        <input type="text" placeholder="Gênero" name="game_type" required id="game_type" value="{{jogosEdit.genero}}">
+        <h4>Ano de lançamento</h4>
+        <input id="ano"type="number" value="{{jogosEdit.dataLancamento}}">
+        <input type="text" placeholder="Produtora" name="game_producer" required id="game_producer" value="{{jogosEdit.produtora}}">
+        
+
+      <div class="infoJogo">
+        <input type="text" placeholder="URL do Trailer" name="game_trailer" required id="game_trailer" value="{{jogosEdit.trailler}}">
+        <input type="text" placeholder="URL da Imagem" name="game_img" required id="game_img" value="{{jogosEdit.imagemLink}}">
+        <input type="text" placeholder="URL da Logo" name="game_logo" required id="game_logo" value="{{jogosEdit.logoLink}}">
+      </div>
+    <div>
+      <a href="/gerenciar-jogos.html">Cancelar</a>
+      <button type="submit">Atualizar</button>
+  </div>
+      
+      </form>    
+    {% endif %}  
 
     <!-- <div class="blocoDeAcao">
       {% for p in jogos %}

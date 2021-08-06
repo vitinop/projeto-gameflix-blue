@@ -20,7 +20,7 @@ class Info_jogos(db.Model):
     nomeJogo = db.Column(db.String(50),nullable=False)
     descricao = db.Column(db.Text,nullable=False)
     imagemLink = db.Column(db.String(500), nullable=False)
-    notaMetric = db.Column(db.Float,nullable=False)
+    notaMetric = db.Column(db.Integer,nullable=False)
     classificacao = db.Column(db.Integer,nullable=False)
     genero = db.Column(db.String(100),nullable=False)
     dataLancamento = db.Column(db.Integer,nullable=False)

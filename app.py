@@ -134,6 +134,10 @@ def edit(id):
     
     return render_template('/gerenciar-jogos.html', jogosEdit=jogosEdit)
 
+
+# @app.route('/adicionar/<id>')
+
+
 #rota de exibição dos jogos cadastrados
 @app.route('/todos-jogos')
 def todos_jogos():

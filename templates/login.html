@@ -25,6 +25,23 @@
         <img src="/static/img/logomarca.svg" alt="Logomarca Gameflix">
       </div>
 
+    </form>
+    <section id="login">
+      <!-- Código copiado da documentação: https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/ -->
+      
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <ul class=flashes>
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+      </ul>
+      {% endif %}
+      {% endwith %}
+      
+    </section>
+
+    <form action="/auth" method="POST">
       <div class="LoginBox">
         <div class="LoginInfo">
           <input type="text" placeholder="E-mail ou nome de usuário" name="user_name" required>
@@ -37,13 +54,15 @@
         <br><br><br>
         <hr>
       </div>
-
     </form>
+
+
+
     <div class="helpLinks">
-      <li><a href="https://www.link de exemplo/">Não tem uma conta ?</br>
+      <li><a href="">Não tem uma conta ?</br>
           Crie uma Conta GameFlix !</a></li>
       </br></br>
-      <li><a href="https://www.link de exemplo/">Não consegue logar ? </a></li>
+      <li><a href="">Não consegue logar ? </a></li>
     </div>
   </div>
   <!--FOOTER CONTENT-->

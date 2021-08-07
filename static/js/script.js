@@ -6,7 +6,7 @@ nav.innerHTML =
     <li><a href="index.html">Home</a></li>
     <li><a href="todos-jogos.html">lista Jogos</a></li>
     
-    <li><a href="login.html">Login</a></li>
+    <li><a href="/login">Login</a></li>
     </ol>
     
     <div class="search-box">

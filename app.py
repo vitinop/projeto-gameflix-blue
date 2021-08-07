@@ -1,4 +1,3 @@
-import re
 from flask import Flask, render_template, request, redirect, session, flash
 import flask
 from flask_mail import Mail, Message
@@ -66,28 +65,50 @@ def new():
 #criação da rota da página index 
 @app.route('/')
 def index():
+    session['usuario_logado'] = None
     jogos = Info_jogos.query.all()
     return render_template('/index.html', jogos = jogos)
 
-@app.route('/login.html')
+@app.route('/login')
 def login():
     return render_template('/login.html')
 
-@app.route('/about.html')
+@app.route('/auth', methods = ['POST','GET'])
+def auth():
+    if request.method == 'POST':
+        if request.form['user_name'] == 'Dorival' and request.form['password'] == 'Dorival' :
+            session['usuario_logado'] = True
+            return redirect ('/gerenciar-jogos') 
+        else:    
+            flash('Você não esta logado')
+        return redirect ('/login')
+
+
+@app.route('/about')
 def about():
+    session['usuario_logado'] = None
     return render_template('/about.html')
 
-@app.route('/cadastro-jogos.html')
+@app.route('/cadastro-jogos')
 def adm_titulos():
+    if session['usuario_logado'] == None or 'usuario_logado' not in session:
+        flash('Você não esta logado')
+        return redirect ('/login')
     return render_template('/cadastro-jogos.html')
 
-@app.route('/gerenciar-jogos.html')
+@app.route('/gerenciar-jogos')
 def adm_gerenciar_jogos():
+    if session['usuario_logado'] == None or 'usuario_logado' not in session:
+        flash('Você não esta logado')
+        return redirect ('/login')
     jogos = Info_jogos.query.all()
     return render_template('/gerenciar-jogos.html', jogos = jogos)
 
 @app.route('/delete/<id>') 
 def delete(id):
+    if session['usuario_logado'] == None or 'usuario_logado' not in session:
+        flash('Você não esta logado')
+        return redirect ('/login')
     jogos = Info_jogos.query.get(id)
     db.session.delete(jogos)
     db.session.commit()
@@ -114,7 +135,7 @@ def edit(id):
     return render_template('/gerenciar-jogos.html', jogosEdit=jogosEdit)
 
 #rota de exibição dos jogos cadastrados
-@app.route('/todos-jogos.html')
+@app.route('/todos-jogos')
 def todos_jogos():
     jogos = Info_jogos.query.all()
     return render_template('/todos-jogos.html', jogos=jogos)

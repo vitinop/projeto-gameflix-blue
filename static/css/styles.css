@@ -121,7 +121,7 @@ body {
 .infoJogo {
   margin-left: auto;
   margin-right: auto;
-  color: #f1f2f1;
+  color: #aaa;
   flex-direction: column;
   width: 25%;
 }
@@ -139,14 +139,6 @@ body {
   background-color: transparent;
 }
 
-
-.infoJogo input:focus{
-  color:rgb(248, 11, 11);
-  font-size:larger;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
 .infoJogo select {
   border: 1px solid rgb(134, 7, 7);
   width: 100%;
@@ -159,7 +151,7 @@ body {
 }
 
 .infoJogo select option:focus {
-  color:rgb(134, 7, 7);
+  
   box-sizing: border-box;
 }
   
@@ -213,14 +205,14 @@ body {
   color: #F1F1F2;
   flex-direction: column;
   width: 20%;
-  background-color: red;
+  background-color: #04AA6D;
   padding: 14px 20px;
   border: none;
   
 }
 
 #botao-cadastro:hover{
-  background-color:#04AA6D
+  opacity: 0.9;
 
 }
 
@@ -231,7 +223,6 @@ body {
 
 
 #ano:focus{
-  color:rgb(248, 11, 11);
   font-size:larger;
   text-transform: uppercase;
 }

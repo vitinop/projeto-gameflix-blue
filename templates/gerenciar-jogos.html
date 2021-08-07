@@ -56,6 +56,7 @@
             <!-- <a href="/read" class="botao">VISUALIZAR</a> -->
             <a href="/edit/{{p.id}}" class="botao">EDITAR</a>
             <a href="/delete/{{p.id}}" class="botao">REMOVER</a>
+            <a href="/adicionar/{{p.id}}" class="botao">ADICIONAR</a>
           </td>
       </tr>
       {% endfor %}
@@ -72,7 +73,7 @@
         <option>Classificação Indicativa</option>
         <option value="18">Não recomendado para menores de 18 anos</option>
         <option value="16">Não recomendado para menores de 16 anos</option>
-        <option value="16">Não recomendado para menores de 14 anos</option>
+        <option value="14">Não recomendado para menores de 14 anos</option>
         <option value="12">Não recomendado para menores de 12 anos</option>
         <option value="10">Não recomendado para menores de 10 anos</option>
         <option value="0">Livre para todos os Públicos </option>
@@ -89,7 +90,7 @@
         <input type="text" placeholder="URL da Logo" name="logoLink" required id="game_logo" value="{{jogosEdit.logoLink}}">
       </div>
     <div>
-      <a href="/gerenciar-jogos.html">Cancelar</a>
+      <a href="/gerenciar-jogos">Cancelar</a>
       <button type="submit">Atualizar</button>
   </div>
       

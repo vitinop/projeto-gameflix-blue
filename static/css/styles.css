@@ -226,13 +226,13 @@ body {
   text-transform: uppercase;
 }
 
-/* Fim da Estilização de adicionar novos jogos */
+
 /* Fim da Estilização de Cadastrar novos jogos */
 
 
 
 
-/* Inicio da estilização da pagina gerenciar Jorgos */
+/* Inicio da estilização da página gerenciar Jogos */
 
 .tabela{
   table-layout: fixed;
@@ -286,7 +286,7 @@ body {
   border-bottom: 1px solid coral;;
   padding: 10px;
 }
-
+/* Botão da Pagina de Cadastrar jogos */
 #botao-cadastro {
   align-items: center;
   font-weight: bold;

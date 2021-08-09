@@ -3,8 +3,8 @@ nav.innerHTML =
     `<nav>
     <img src="../static/img/logomarca-2.svg">
     <ol>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="todos-jogos.html">lista Jogos</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/todos-jogos">lista Jogos</a></li>
     
     <li><a href="/login">Login</a></li>
     </ol>

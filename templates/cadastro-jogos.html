@@ -22,37 +22,66 @@
   <!--MAIN CONTENT-->
   <form action="/new" method="POST">
     <div class="infoJogo">
-      <div id="jogoAdd">
-      <input type="text" placeholder="Nome do título" name="game_name" required id="game_name">  
-      <div>
-      <h4>Ano de lançamento</h4>
-      <input id="ano" type="number" value="2021">
+
+      <div id="nomeAdd">
+        <p>Nome</p>
+        <input type="text" placeholder="Nome do título" name="game_name" required id="game_name">
       </div>
 
+      <div id="produtoraAdd">
+        <p>Produtora</p>
+        <input type="text" placeholder="Produtora" name="game_producer" required id="game_producer">
+      </div>
+
+      <div id="generoaAdd">
+        <p>Gênero</p>
+        <select name="game_gender" id="game_gender" >
+        <option>Selecione um ou mais gêneros</option>
+        <option value="action" >Ação</option>
+        <option value="rpg" >RPG</option>
+        <option value="fps" >Tiro em Primeira Pessoa - FPS</option>
+        <option value="tps" >Tiro em Terceira Pessoa - TPS</option>
+        <option value="horror">Terror</option>
+        <option value="stealth">Espionagem</option>
+        <option value="adventure" >Aventura</option>
+        <option value="action" >Ação</option>
+        <option value="mmo" > MMO- Massively Multiplayer Online</option>
+        <option value="moba"> MOBA- Multiplayer Online Battle Arena </option>
+        <option value="openWorld"> Mundo Aberto </option>
+        </select>
+      </div>
+      <div id="anoAdd">
+        <p>Lançamento</p>
+        <input id="ano" type="number" value="2021">
+      </div>
       <div id="descricaoAdd">
-      <input type="text" placeholder="Descrição" name="game_description" required id="game_description">
+        <input type="text" placeholder="Descrição" name="game_description" required id="game_description">
       </div>
-      <input type="text" placeholder="Nota Metacritic" name="game_grade" required id="game_grade">
-      <select name="game_parental_rating" id="game_parental_rating">
-        <option>Classificação Indicativa</option>
-        <option value="18" class="clas-18">Não recomendado para menores de 18 anos</option>
-        <option value="16" class="clas-16">Não recomendado para menores de 16 anos</option>
-        <option value="14" class="clas-14">Não recomendado para menores de 14 anos</option>
-        <option value="12" class="clas-12">Não recomendado para menores de 12 anos</option>
-        <option value="10" class="clas-10">Não recomendado para menores de 10 anos</option>
-        <option value="0" class="clas-L">Livre para todos os Públicos </option>
-      </select>
-      <input type="text" placeholder="Gênero" name="game_type" required id="game_type">
-      
-      <input type="text" placeholder="Produtora" name="game_producer" required id="game_producer">
-    </div>
 
-    <div class="infoJogo">
-      <input type="text" placeholder="URL do Trailer" name="game_trailer" required id="game_trailer">
-      <input type="text" placeholder="URL da Imagem" name="game_img" required id="game_img">
-      <input type="text" placeholder="URL da Logo" name="game_logo" required id="game_logo">
-    </div>
+      <div id="notaAdd">
+        <p>Nota Metacritic</p>
+        <input type="number" placeholder="0-100 " name="game_grade" required id="game_grade">
+      </div>
 
+      <div id="idadeRecomendadaAdd">
+        <p>Classificação Indicativa</p>
+        <select name="game_parental_rating" id="game_parental_rating">
+          <option>Classificação Indicativa</option>
+          <option value="18" >+18 -Não recomendado para menores de 18 anos</option>
+          <option value="16" >+16 -Não recomendado para menores de 16 anos</option>
+          <option value="14" >+14 -Não recomendado para menores de 14 anos</option>
+          <option value="12" >+12 -Não recomendado para menores de 12 anos</option>
+          <option value="10" >+10 -Não recomendado para menores de 10 anos</option>
+          <option value="0" >L -Livre para todos os Públicos </option>
+        </select>
+      </div>
+      <div id="midiaAdd">
+        <p>Mídia</p> 
+        <input type="text" placeholder="URL do Trailer" name="game_trailer" required id="game_trailer">
+        <input type="text" placeholder="URL da Imagem" name="game_img" required id="game_img">
+        <input type="text" placeholder="URL da Logo" name="game_logo" required id="game_logo">
+      </div>
+    </div>
     <button type="submit" id="botao-cadastro">Adicionar Título ao catálogo</button>
   </form>
 

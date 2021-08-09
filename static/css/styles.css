@@ -210,6 +210,21 @@ body {
   
 }
 
+/* Botão da Pagina de Cadastrar jogos */
+#botao-cadastro {
+  align-items: center;
+  font-weight: bold;
+  margin: 2%;
+  margin-left: 40%;
+  color: #F1F1F2;
+  flex-direction: column;
+  width: 20%;
+  background-color: #04AA6D;
+  padding: 14px 20px;
+  border: none;
+  
+}
+
 #botao-cadastro:hover{
   opacity: 0.9;
 
@@ -261,7 +276,6 @@ body {
   border: none;
   border-radius: 10px;
   color: white;
-  
   padding: 5px;
   margin: 10px;
   font-size: 18px;
@@ -270,9 +284,11 @@ body {
   cursor: pointer;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.796);
 }
+
 .botao:hover{
   opacity: 0.91;
 }
+
 .blocoDeAcao{
   display: flex;
   justify-content: center;
@@ -286,20 +302,7 @@ body {
   border-bottom: 1px solid coral;;
   padding: 10px;
 }
-/* Botão da Pagina de Cadastrar jogos */
-#botao-cadastro {
-  align-items: center;
-  font-weight: bold;
-  margin: 2%;
-  margin-left: 40%;
-  color: #F1F1F2;
-  flex-direction: column;
-  width: 20%;
-  background-color: #04AA6D;
-  padding: 14px 20px;
-  border: none;
-  
-}
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

@@ -138,7 +138,7 @@ def edit(id):
         jogosEdit.trailler = request.form['trailler']
         jogosEdit.logoLink = request.form['logoLink']
         db.session.commit()
-        return redirect('/gerenciar-jogos.html')
+        return redirect('/gerenciar-jogos')
     
     return render_template('/gerenciar-jogos.html', jogosEdit=jogosEdit)
 

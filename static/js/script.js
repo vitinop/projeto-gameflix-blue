@@ -31,8 +31,8 @@ foot.innerHTML =
 </footer>
 </div>`;
 
-const edit = document.querySelector('#edit');
-edit.innerHTML = `
+const addTitle = document.querySelector('#addTitle');
+addTitle.innerHTML = `
 <form action="/new" method="POST">
     <div class="infoJogo">
 
@@ -106,6 +106,12 @@ edit.innerHTML = `
 
     </div>
     <button type="submit" id="botao-cadastro">Adicionar Título ao catálogo</button>
+    
   </form>
 `
+
+const editTitle = document.querySelector('#editTitle');
+editTitle.innerHTML = `
+`
+
 

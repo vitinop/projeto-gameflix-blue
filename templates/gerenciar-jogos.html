@@ -22,7 +22,7 @@
   <table class="tabela">
     <thead>
       <tr class="tabela_header">
-        
+
         <!-- <th>ID</th> -->
         <th>NOME</th>
         <!-- <th>DESCRIÇÃO</th> -->
@@ -41,71 +41,119 @@
       <!-- for para exibição em tabela dos jogos cadastrados dentro do BD -->
       {% for p in jogos %}
       <tr>
-          <!-- <td>{{p.id}}</td> -->
-          <td>{{p.nomeJogo}}</td>
-          <!-- <td>{{p.descricao}}</td> -->
-          <!-- <td>{{p.imagemLink}}</td> -->
-          <td>{{p.notaMetric}}</td>
-          <td>{{p.classificacao}}</td>
-          <td>{{p.genero}}</td>
-          <td>{{p.dataLancamento}}</td>
-          <td>{{p.produtora}}</td>
-          <!-- <td>{{p.trailler}}</td> -->
-          <!-- <td>{{p.logoLink}}</td> -->
-          <td>
-            <!-- <a href="/read" class="botao">VISUALIZAR</a> -->
-            <div class="botoesGenrenciamento">
+        <!-- <td>{{p.id}}</td> -->
+        <td>{{p.nomeJogo}}</td>
+        <!-- <td>{{p.descricao}}</td> -->
+        <!-- <td>{{p.imagemLink}}</td> -->
+        <td>{{p.notaMetric}}</td>
+        <td>{{p.classificacao}}</td>
+        <td>{{p.genero}}</td>
+        <td>{{p.dataLancamento}}</td>
+        <td>{{p.produtora}}</td>
+        <!-- <td>{{p.trailler}}</td> -->
+        <!-- <td>{{p.logoLink}}</td> -->
+        <td>
+          <!-- <a href="/read" class="botao">VISUALIZAR</a> -->
+          <div class="botoesGerenciamento">
             <a href="/edit/{{p.id}}" class="botao">EDITAR</a>
             <a href="/delete/{{p.id}}" class="botao">REMOVER</a>
             <a href="/cadastro-jogos" class="botao">ADICIONAR</a>
-            </div>
-          </td>
+          </div>
+        </td>
       </tr>
       {% endfor %}
     </tbody>
     <!-- Formulario de edição  -->
     {% if jogosEdit != undefined %}
-      <form action="/edit/{{jogosEdit.id}}" method="post">
-        <h1>Editar informações</h1>
 
-        <input type="text" placeholder="Nome do título" name="nomeJogo" required id="game_name" value="{{jogosEdit.nomeJogo}}">
-        <input type="text" placeholder="Descrição" name="descricao" required id="game_description" value="{{jogosEdit.descricao}}">
-        <input type="text" placeholder="Nota Metacritic" name="notaMetric" required id="game_grade" value="{{jogosEdit.notaMetric}}">
-        <select name="classificacao" id="game_parental_rating" value="{{jogosEdit.classificacao}}">
-        <option>Classificação Indicativa</option>
-        <option value="18">Não recomendado para menores de 18 anos</option>
-        <option value="16">Não recomendado para menores de 16 anos</option>
-        <option value="14">Não recomendado para menores de 14 anos</option>
-        <option value="12">Não recomendado para menores de 12 anos</option>
-        <option value="10">Não recomendado para menores de 10 anos</option>
-        <option value="0">Livre para todos os Públicos </option>
-        </select>
-        <input type="text" placeholder="Gênero" name="genero" required id="game_type" value="{{jogosEdit.genero}}">
-        <h4>Ano de lançamento</h4>
-        <input id="ano"type="number" name="dataLancamento" value="{{jogosEdit.dataLancamento}}">
-        <input type="text" placeholder="Produtora" name="produtora" required id="game_producer" value="{{jogosEdit.produtora}}">
-        
-
+    <form action="/edit/{{jogosEdit.id}}" method="post">
       <div class="infoJogo">
-        <input type="text" placeholder="URL do Trailer" name="trailler" required id="game_trailer" value="{{jogosEdit.trailler}}">
-        <input type="text" placeholder="URL da Imagem" name="imagemLink" required id="game_img" value="{{jogosEdit.imagemLink}}">
-        <input type="text" placeholder="URL da Logo" name="logoLink" required id="game_logo" value="{{jogosEdit.logoLink}}">
-      </div>
-    <div>
-      <a href="/gerenciar-jogos">Cancelar</a>
-      <button type="submit">Atualizar</button>
-  </div>
-      
-      </form>    
-    {% endif %}  
 
- 
+        <div id="nomeAdd">
+          <p>Nome</p>
+          <input type="text" placeholder="Nome do título" name="game_name" required id="game_name">
+        </div>
+
+        <div id="produtoraAdd">
+          <p>Produtora</p>
+          <input type="text" placeholder="Produtora" name="game_producer" required id="game_producer">
+        </div>
+
+        <div id="lacamentoAdd">
+          <p>Lançamento</p>
+          <input id="ano" type="number" value="2021">
+        </div>
+
+        <div id="notaAdd">
+          <p>Nota Metacritic</p>
+          <input type="number" placeholder="0-100 " name="game_grade" id="game_grade" required>
+        </div>
+        <div class="caixasdeOpcoes">
+          <div id="idadeRecomendadaAdd">
+            <p>Classificação Indicativa</p>
+            <select name="game_parental_rating" id="game_parental_rating">
+              <option>Classificação Indicativa</option>
+              <option value="18">+18 - Não recomendado para menores de 18 anos</option>
+              <option value="16">+16 - Não recomendado para menores de 16 anos</option>
+              <option value="14">+14 - Não recomendado para menores de 14 anos</option>
+              <option value="12">+12 - Não recomendado para menores de 12 anos</option>
+              <option value="10">+10 - Não recomendado para menores de 10 anos</option>
+              <option value="0">L - Livre para todos os Públicos </option>
+            </select>
+          </div>
+          <div id="generoaAdd">
+            <p>Gênero</p>
+            <select name="game_gender" id="game_gender">
+              <option>Selecione um ou mais gêneros</option>
+              <option value="action">Ação</option>
+              <option value="rpg">RPG</option>
+              <option value="fps">Tiro em Primeira Pessoa - FPS</option>
+              <option value="tps">Tiro em Terceira Pessoa - TPS</option>
+              <option value="plataform">Plataforma</option>
+              <option value="fighting">Luta</option>
+              <option value="music">Musical</option>
+              <option value="horror">Terror</option>
+              <option value="stealth">Espionagem</option>
+              <option value="adventure">Aventura</option>
+              <option value="action">Ação</option>
+              <option value="mmo"> MMO - Massively Multiplayer Online</option>
+              <option value="moba"> MOBA - Multiplayer Online Battle Arena </option>
+              <option value="openWorld"> Mundo Aberto </option>
+            </select>
+          </div>
+        </div>
+        <div id="descricaoAdd">
+          <label for="game_description">Descrição</label>
+          <textarea type="text" placeholder="Descrição do jogo..." name="game_description" id="game_description"
+            required></textarea>
+        </div>
+
+
+        <div id="midiaAdd">
+          <p>Mídia</p>
+          <input type="text" placeholder="URL do Trailer" name="game_trailer" required id="game_trailer">
+          <input type="text" placeholder="URL da Imagem" name="game_img" required id="game_img">
+          <input type="text" placeholder="URL da Logo" name="game_logo" required id="game_logo">
+        </div>
+
+
+      </div>
+      <button type="submit" id="botao-aplicar-edicao">Aplicar mudanças ao Título no catálogo</button>
+      <button type="reset" action="reset" id="botao-editando-cancel">Cancelar</button>
+    </form>
+    <div id="editTitle"></div>
+    </div>
+
+    </form>
+    {% endif %}
+
+
 
   </table>
   <br>
-  
 
-      
+
+
   <!--FOOTER CONTENT-->
   <div id="foot"></div>
 </body>

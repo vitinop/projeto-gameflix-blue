@@ -136,13 +136,13 @@ body {
 
 
 #produtoraAdd{
-  grid-column: 4;
+  grid-column: 4/5;
   grid-row: 1;
 
 }
 
-#anoAdd {
-  grid-column:1/2;
+#lancamentoAdd {
+  grid-column:1;
   grid-row: 2;
 }
 
@@ -153,10 +153,13 @@ body {
 
 
 #generoaAdd{
-  grid-column: 4;
-  grid-row: 4;
+  grid-column: 5;
+  grid-row: 2;
 }
-
+#caixasdeOpcoes{
+  grid-column: 5;
+  grid-row: 2;    
+}
 #descricaoAdd{
   grid-column: 1/5;
   grid-row: 3;
@@ -166,19 +169,16 @@ body {
   height:20rem;
 }
 
-#idadeRecomendadaAdd{
-    grid-column: 4;
-    grid-row: 4;    
-}
-#idadeRecomendadaAdd option
-{ background-color:#0d1117 ;
-  color: #F1F1F2;
-}
 #midiaAdd{
-  grid-column:1/4 ;
+  grid-column:1/5 ;
   grid-row: 4;
 }
-.infoJogo input {
+
+.caixasdeOpcoes option{ background-color:#0d1117 ;
+  color: #F1F1F2;
+}
+
+.infoJogo input,textarea{
   width: 100%;
   padding: 0.5rem 0.6rem;
   margin: 8px 0;
@@ -188,6 +188,10 @@ body {
   font-weight: bold;
   color: #f5f5f5;
   background-color: transparent;
+}
+.infoJogo textarea{
+  height:13rem;
+
 }
 
 .anoAdd select {

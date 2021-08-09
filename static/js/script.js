@@ -11,14 +11,13 @@ nav.innerHTML =
     
     <div class="search-box">
       <button class="btn-search"><i class="fas fa-search"> <img src="/static/img/lupa.png"></i></button>
-      <input type="text" class="input-search" placeholder="Type to Search...">
+      <input type="text" class="input-search" placeholder="Buscar...">
     </div>
-  </nav>`
-;
+  </nav>`;
 
 const foot = document.querySelector('#foot');
-foot.innerHTML = `
-<div class="footer-basic">
+foot.innerHTML = 
+`<div class="footer-basic">
 <footer>
   <ul class="list-inline-footer">
     <li class="list-inline-item"><a href="#">Suporte</a></li>

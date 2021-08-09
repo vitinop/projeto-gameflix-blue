@@ -25,7 +25,14 @@
   <!--MAIN CONTENT-->
   <form action="/new" method="POST">
     <div class="infoJogo">
-      <input type="text" placeholder="Nome do título" name="game_name" required id="game_name">
+      <div id="jogoAdd">
+      <input type="text" placeholder="Nome do título" name="game_name" required id="game_name">  
+      <div>
+      <h4>Ano de lançamento</h4>
+      <input id="ano" type="number" value="2021">
+      </div>
+
+      <div id="descricaoAdd">
       <input type="text" placeholder="Descrição" name="game_description" required id="game_description">
       <input type="text" placeholder="Nota Metacritic" name="game_grade" required id="game_grade">
       <select name="game_parental_rating" id="game_parental_rating">
@@ -38,8 +45,7 @@
         <option value="0" class="clas-L">Livre para todos os Públicos </option>
       </select>
       <input type="text" placeholder="Gênero" name="game_type" required id="game_type">
-      <h4>Ano de lançamento</h4>
-      <input id="ano" type="number" value="2021">
+      
       <input type="text" placeholder="Produtora" name="game_producer" required id="game_producer">
     </div>
 

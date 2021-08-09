@@ -119,13 +119,21 @@ body {
 
 /* Inicio da Estilização de Cadastrar novos jogos */
 .infoJogo {
-  margin-left: auto;
-  margin-right: auto;
-  color: #aaa;
+  display: flex;
   flex-direction: column;
+  
+  color: #aaa;
+  
   width: 25%;
 }
 
+#anoAdd {
+  align-items:flex-end;
+  width:18%;
+}
+#descricaoAdd input{
+  height:20rem;
+}
 .infoJogo input {
   width: 100%;
   padding: 0.5rem 0.6rem;
@@ -226,7 +234,6 @@ body {
   text-transform: uppercase;
 }
 
-/* Fim da Estilização de adicionar novos jogos */
 /* Fim da Estilização de Cadastrar novos jogos */
 
 

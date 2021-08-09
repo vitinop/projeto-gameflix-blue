@@ -54,9 +54,11 @@
           <!-- <td>{{p.logoLink}}</td> -->
           <td>
             <!-- <a href="/read" class="botao">VISUALIZAR</a> -->
+            <div class="botoesGenrenciamento">
             <a href="/edit/{{p.id}}" class="botao">EDITAR</a>
             <a href="/delete/{{p.id}}" class="botao">REMOVER</a>
             <a href="/adicionar/{{p.id}}" class="botao">ADICIONAR</a>
+            </div>
           </td>
       </tr>
       {% endfor %}

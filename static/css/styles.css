@@ -119,18 +119,69 @@ body {
 
 /* Inicio da Estilização de Cadastrar novos jogos */
 .infoJogo {
-  margin-left: auto;
-  margin-right: auto;
+  display: grid;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
   color: #aaa;
-  flex-direction: column;
-  width: 25%;
+  
+}
+#nomeAdd{
+  grid-column: 1/4 ;
+  grid-row: 1;
+  
 }
 
-.infoJogo input {
+
+#produtoraAdd{
+  grid-column: 4/5;
+  grid-row: 1;
+
+}
+
+#lancamentoAdd {
+  grid-column:1;
+  grid-row: 2;
+}
+
+#notaAdd{
+  grid-column: 2/4;
+  grid-row: 2;
+}
+
+
+#generoaAdd{
+  grid-column: 5;
+  grid-row: 2;
+}
+#caixasdeOpcoes{
+  grid-column: 5;
+  grid-row: 2;    
+}
+#descricaoAdd{
+  grid-column: 1/5;
+  grid-row: 3;
+}
+
+#descricaoAdd input{
+  height:20rem;
+}
+
+#midiaAdd{
+  grid-column:1/5 ;
+  grid-row: 4;
+}
+
+.caixasdeOpcoes option{ background-color:#0d1117 ;
+  color: #F1F1F2;
+}
+
+.infoJogo input,textarea{
   width: 100%;
   padding: 0.5rem 0.6rem;
   margin: 8px 0;
-  display: inline-block;
   border: 1px solid rgb(134, 7, 7);
   box-sizing: border-box;
   font-size: 1.1rem;
@@ -138,8 +189,12 @@ body {
   color: #f5f5f5;
   background-color: transparent;
 }
+.infoJogo textarea{
+  height:13rem;
 
-.infoJogo select {
+}
+
+.anoAdd select {
   border: 1px solid rgb(134, 7, 7);
   width: 100%;
   padding: 0.5rem 0.6rem;
@@ -150,50 +205,8 @@ body {
 
 }
 
-.infoJogo select option:focus {
+.anoAdd select option:focus {
   box-sizing: border-box;
-}
-  
-.clas-L {
-  background-color:#05A53D;
-  color:white;
-} 
-
-.clas-10{
-  background-color:#1abcf6;
-  color:white;
-}
-
-.clas-12{
-  background-color:#fed007;
-  color:white;
-
-}
-
-.clas-14{
-  background-color:#fc4407;
-  color:white;
-}
-
-.clas-16{
-  background-color:#fc0712;
-  color:white;
-}
-
-.clas-18{
-  background-color:black;
-  color:white;
-}
-
-
-.option-2 {
-  border: 1px solid rgb(134, 7, 7);
-  background-color:#04AA6D;
-  color:#aaa;
-}   
-.infoJogo div h4{
-  color:#aaa;
-
 }
 
 #botao-cadastro {
@@ -202,28 +215,14 @@ body {
   margin:1%;
   margin-left: 40%;
   color: #F1F1F2;
-  flex-direction: column;
   width: 20%;
   background-color: #04AA6D;
   padding: 14px 20px;
   border: none;
-  
 }
 
 #botao-cadastro:hover{
   opacity: 0.9;
-
-}
-
-#ano{
-  background-color:transparent;
-  color:#aaa;
-}
-
-
-#ano:focus{
-  font-size:larger;
-  text-transform: uppercase;
 }
 
 
@@ -232,7 +231,7 @@ body {
 
 
 
-/* Inicio da estilização da página gerenciar Jogos */
+/* Inicio da estilização da pagina gerenciar Jorgos */
 
 .tabela{
   table-layout: fixed;
@@ -286,7 +285,7 @@ body {
   border-bottom: 1px solid coral;;
   padding: 10px;
 }
-/* Botão da Pagina de Cadastrar jogos */
+
 #botao-cadastro {
   align-items: center;
   font-weight: bold;

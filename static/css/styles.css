@@ -117,7 +117,7 @@ body {
 
 
 
-/* Inicio da Estilização de Cadastrar novos jogos */
+/* Inicio da Estilização de Cadastrar e Editar novos jogos */
 .infoJogo {
   display: grid;
   width: 100%;
@@ -222,6 +222,41 @@ body {
 }
 
 #botao-cadastro:hover{
+  
+  opacity: 0.9;
+}
+
+
+#botao-aplicar-edicao{
+  align-items: center;
+  font-weight: bold;
+  margin:1%;
+  margin-left: 40%;
+  color: #F1F1F2;
+  width: 20%;
+  background-color: #04AA6D;
+  padding: 14px 20px;
+  border: none;
+}
+
+
+#botao-aplicar-edicao:hover{
+  
+  opacity: 0.9;
+}
+#botao-editando-cancel{
+  font-weight: bold;
+  margin:1%;
+  margin-left: 40%;
+  color: #F1F1F2;
+  width: 20%;
+  background-color: #f30000;
+  padding: 14px 20px;
+  border: none;
+
+}
+#botao-editando-cancel:hover{
+  
   opacity: 0.9;
 }
 

@@ -1,3 +1,4 @@
+from enum import unique
 from flask import Flask, render_template, request, redirect, session, flash
 import flask
 from flask_mail import Mail, Message
@@ -16,7 +17,7 @@ db = SQLAlchemy(app)
 #criação da classe e criação das colunas do banco de dados
 class Info_jogos(db.Model):
     id = db.Column(db.Integer, primary_key=True,autoincrement=True)
-    nomeJogo = db.Column(db.String(50),nullable=False)
+    nomeJogo = db.Column(db.String(50),nullable=False, unique= True)
     descricao = db.Column(db.Text,nullable=False)
     imagemLink = db.Column(db.String(500), nullable=False)
     notaMetric = db.Column(db.Integer,nullable=False)

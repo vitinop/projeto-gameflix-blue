@@ -115,6 +115,13 @@ def delete(id):
     db.session.commit()
     return redirect('/gerenciar-jogos.html')
 
+# @app.route('/adicionar<id>')
+# def adicionar():
+#     if session['usuario_logado'] == None or 'usuario_logado' not in session:
+#         flash('Você não esta logado')
+#         return redirect ('/login')
+#     return render_template('/cadastro-jogos.html')
+
 #criação da rota para edição dos dados dentro do banco
 @app.route('/edit/<id>', methods = ['POST', 'GET'])
 def edit(id):

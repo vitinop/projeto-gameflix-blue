@@ -38,27 +38,27 @@ addTitle.innerHTML = `
 
       <div id="nomeAdd">
         <p>Nome</p>
-        <input type="text" placeholder="Nome do título" name="game_name" required id="game_name">
+        <input type="text" placeholder="Nome do título" name="nomeJogo" required id="game_name">
       </div>
 
       <div id="produtoraAdd">
         <p>Produtora</p>
-        <input type="text" placeholder="Produtora" name="game_producer" required id="game_producer">
+        <input type="text" placeholder="Produtora" name="produtora" required id="game_producer">
       </div>
 
       <div id="lacamentoAdd">
         <p>Lançamento</p>
-        <input id="ano" type="number" value="2021">
+        <input id="ano" type="number" value="2021" name="dataLancamento">
       </div>
 
       <div id="notaAdd">
         <p>Nota Metacritic</p>
-        <input type="number" placeholder="0-100 " name="game_grade" id="game_grade" required>
+        <input type="number" placeholder="0-100 " name="notaMetric" id="game_grade" required>
       </div>
       <div class="caixasdeOpcoes">
         <div id="idadeRecomendadaAdd">
           <p>Classificação Indicativa</p>
-          <select name="game_parental_rating" id="game_parental_rating">
+          <select name="classificacao" id="game_parental_rating">
             <option>Classificação Indicativa</option>
             <option value="18">+18 - Não recomendado para menores de 18 anos</option>
             <option value="16">+16 - Não recomendado para menores de 16 anos</option>
@@ -70,7 +70,7 @@ addTitle.innerHTML = `
         </div>
         <div id="generoaAdd">
           <p>Gênero</p>
-          <select name="game_gender" id="game_gender">
+          <select name="genero" id="game_gender">
             <option>Selecione um ou mais gêneros</option>
             <option value="action">Ação</option>
             <option value="rpg">RPG</option>
@@ -91,16 +91,16 @@ addTitle.innerHTML = `
       </div>
       <div id="descricaoAdd">
         <label for="game_description">Descrição</label>
-        <textarea type="text" placeholder="Descrição do jogo..." name="game_description" id="game_description"
+        <textarea type="text" placeholder="Descrição do jogo..." name="descricao" id="game_description"
           required></textarea>
       </div>
 
 
       <div id="midiaAdd">
         <p>Mídia</p>
-        <input type="text" placeholder="URL do Trailer" name="game_trailer" required id="game_trailer">
-        <input type="text" placeholder="URL da Imagem" name="game_img" required id="game_img">
-        <input type="text" placeholder="URL da Logo" name="game_logo" required id="game_logo">
+        <input type="text" placeholder="URL do Trailer" name="trailler" required id="game_trailer">
+        <input type="text" placeholder="URL da Imagem" name="imagemLink" required id="game_img">
+        <input type="text" placeholder="URL da Logo" name="logoLink" required id="game_logo">
       </div>
 
 

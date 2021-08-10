@@ -103,6 +103,7 @@ nav ol li:hover a {
 }
 
 .btn-search:focus~.input-search {
+    
     background-color: #cbd4e2;
     width: 25rem;
     border-radius: 0px;

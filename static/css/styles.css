@@ -1,4 +1,5 @@
 @import url("../css/header-footer.css");
+
 :root {
   --primary-color: #0d1117;
 }
@@ -126,60 +127,63 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   color: #aaa;
-  
+
 }
 
 /* Posicionamento de cada elemento utilizando conceitos Grid */
-#nomeAdd{
-  grid-column: 1/4 ;
+#nomeAdd {
+  grid-column: 1/4;
   grid-row: 1;
 }
 
-#produtoraAdd{
+#produtoraAdd {
   grid-column: 4/5;
   grid-row: 1;
 }
 
 #lancamentoAdd {
-  grid-column:1;
+  grid-column: 1;
   grid-row: 2;
 }
 
-#notaAdd{
+#notaAdd {
   grid-column: 2/4;
   grid-row: 2;
 }
 
-#generoaAdd{
+#generoaAdd {
   grid-column: 5;
   grid-row: 2;
 }
 
-#caixasdeOpcoes{
+#caixasdeOpcoes {
   grid-column: 5;
-  grid-row: 2;    
+  grid-row: 2;
 }
 
-#descricaoAdd{
+#descricaoAdd {
   grid-column: 1/5;
   grid-row: 3;
 }
 
-#descricaoAdd input{
-  height:20rem;
+#descricaoAdd input {
+  height: 20rem;
 }
 
-#midiaAdd{
-  grid-column:1/5 ;
+#midiaAdd {
+  grid-column: 1/5;
   grid-row: 4;
 }
+
 /* Estilização de caixas de opções */
-.caixasdeOpcoes option{ background-color:#0d1117 ;
+.caixasdeOpcoes option {
+  background-color: #0d1117;
   color: #F1F1F2;
 }
 
 /* Estilização de inputs */
-.infoJogo input,textarea{
+.infoJogo input,
+textarea {
   width: 100%;
   padding: 0.5rem 0.6rem;
   margin: 8px 0;
@@ -190,8 +194,9 @@ body {
   color: #f5f5f5;
   background-color: transparent;
 }
-.infoJogo textarea{
-  height:13rem;
+
+.infoJogo textarea {
+  height: 13rem;
 
 }
 
@@ -199,7 +204,7 @@ body {
 #botao-cadastro {
   align-items: center;
   font-weight: bold;
-  margin:1%;
+  margin: 1%;
   margin-left: 40%;
   color: #F1F1F2;
   width: 20%;
@@ -208,10 +213,11 @@ body {
   border: none;
 }
 
-#botao-cadastro:hover{
-  
+#botao-cadastro:hover {
+
   opacity: 0.9;
 }
+
 /* Fim da Estilização de Cadastrar e Editar novos jogos */
 
 
@@ -226,41 +232,45 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   color: #aaa;
-  
+
 }
 
 /* Posicionamento de cada elemento utilizando conceitos Grid */
-#nomeUserAdd{
-  grid-column: 1/3 ;
+#nomeUserAdd {
+  grid-column: 1/3;
   grid-row: 1;
 }
-#birthUserAdd{
+
+#birthUserAdd {
   grid-column: 3/4;
   grid-row: 1;
 }
-#cpfUserAdd{
+
+#cpfUserAdd {
   grid-column: 3;
   grid-row: 2;
 }
-#emailUserAdd{
+
+#emailUserAdd {
   grid-column: 1;
   grid-row: 2;
 
 }
-#celularlUserAdd{
+
+#celularlUserAdd {
   grid-column: 2;
   grid-row: 2;
 
 }
 
-#passwordUserAdd{
+#passwordUserAdd {
   grid-column: 1/3;
-    grid-row: 3;
+  grid-row: 3;
 }
 
 
 /* Estilização de inputs */
-.infoUser input{
+.infoUser input {
   width: 100%;
   padding: 0.5rem 0.6rem;
   margin: 8px 0;
@@ -277,7 +287,7 @@ body {
 #botaoRegistroUser {
   align-items: center;
   font-weight: bold;
-  margin:1%;
+  margin: 1%;
   margin-left: 40%;
   color: #F1F1F2;
   width: 20%;
@@ -286,17 +296,18 @@ body {
   border: none;
 }
 
-#botaoRegistroUser:hover{
-  
+#botaoRegistroUser:hover {
+
   opacity: 0.9;
 }
+
 /* Fim da Estilização de botão cadastrar  da Pag de cadastro de novos usuarios */
 
 /* Estilização de botões da Pag de Edição */
-#botao-aplicar-edicao{
+#botao-aplicar-edicao {
   align-items: center;
   font-weight: bold;
-  margin:1%;
+  margin: 1%;
   margin-left: 40%;
   color: #F1F1F2;
   width: 20%;
@@ -306,13 +317,14 @@ body {
 }
 
 
-#botao-aplicar-edicao:hover{
-  
+#botao-aplicar-edicao:hover {
+
   opacity: 0.9;
 }
-#botao-editando-cancel{
+
+#botao-editando-cancel {
   font-weight: bold;
-  margin:1%;
+  margin: 1%;
   margin-left: 40%;
   color: #F1F1F2;
   width: 20%;
@@ -321,8 +333,9 @@ body {
   border: none;
 
 }
-#botao-editando-cancel:hover{
-  
+
+#botao-editando-cancel:hover {
+
   opacity: 0.9;
 }
 
@@ -334,71 +347,127 @@ body {
 
 /* Inicio da estilização da pagina gerenciar Jorgos */
 
-.tabela{
-  table-layout:auto;
+.tabela {
+  table-layout:fixed;
   width: 100%;
   text-align: center;
   align-items: center;
-  border: 1px solid #FF7F50;
+  border: 1px solid #771e1e;
   border-collapse: collapse;
-  color: white;
-  background:linear-gradient(90deg, rgba(248,221,117,1) 0%, rgba(233,142,80,1) 50%, rgba(202,100,58,1) 100%); 
+  color: #F1F1F2;
+  background:#1A1A1A;
 }
-#tableGrade{
-  width: 1rem;
+/* Blocos de Tabela - head */
+#tableIdHead{
+  width: 3rem;
 }
-#tableRelease{
+#tableNameHead {
+  width: 12rem;
+}
+#tableDescriptionHead {
+  width: 17rem;
+}
+#tableGradeHead{
+  width: 4rem
+
+}
+#tableParentalHead {
+  width: 8rem;
+}
+#tableGenderHead{
+  width: 6rem;
+}
+#tableReleaseHead {
+  width: 6rem;
+}
+#tableProducerHead {
   width: 10rem;
 }
+#tableTrailerHead {
+  width: 11rem;
+}
+#tableIMGHead{
+  width: 13rem;
+}
+#tableLogoHead{
+  width: 13rem;
+}
+#tableToolsHead{
+  width: 15.8rem;
+}
+/* Blocos de Tabela - Conteudo */
+.tabela_conteudo{
+  overflow-wrap: break-word;
+}
 
-
-.tabela td{
+.tabela td {
   padding: 0.1rem;
-  border: 1px solid #FF7F50;
+  border: 1px solid #771e1e;
   background-color: #1A1A1A;
 }
 
-.tabela th{
+.tabela th {
   padding: 0.3rem;
   height: 1rem;
 }
+
 .addNovoTituloBotao {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+
+}
+.listaBotoesGerenciamento{
+  width: 8.7rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  justify-content: flex-start;
+  text-align: left;
+  list-style: none;
   
 }
 
-.botao{
-  
-  background-color:#f30000;
+.listaBotoesGerenciamento ul{
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+ 
+}
+
+.botao {
+
+  background-color: #f30000;
   border: none;
   border-radius: 10px;
   color: white;
-  
   padding: 0.4rem;
-  margin: 10px;
-  font-size: 18px;
+  margin: 5px;
+  font-size: 15px;
   align-items: center;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.796);
 }
-.botao:hover{
+
+.botao:hover {
   opacity: 0.91;
 }
-.blocoDeAcao{
+
+.blocoDeAcao {
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
-.blocoDeAcao h1{
+.blocoDeAcao h1 {
   color: white;
   box-shadow: 5px;
   border-top: 1px solid coral;
-  border-bottom: 1px solid coral;;
+  border-bottom: 1px solid coral;
+  ;
   padding: 10px;
 }
 
@@ -413,7 +482,7 @@ body {
   background-color: #04AA6D;
   padding: 14px 20px;
   border: none;
-  
+
 }
 
 

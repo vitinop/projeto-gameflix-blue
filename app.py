@@ -1,4 +1,5 @@
 from enum import unique
+from typing_extensions import Required
 from flask import Flask, render_template, request, redirect, session, flash
 import flask
 from flask_mail import Mail, Message
@@ -72,7 +73,7 @@ def new():
         )    
         db.session.add(jogo)
         db.session.commit()
-        return redirect('/cadastro-jogos.html')
+        return redirect('/cadastro-jogos')
 
 #criação da rota da página index 
 @app.route('/')
@@ -84,6 +85,17 @@ def index():
 @app.route('/login')
 def login():
     return render_template('/login.html')
+
+@app.route('/newLogin')
+def newLogin():
+    if request.method == 'POST':
+        user = User(
+            request.form['username'],
+            request.form['password']
+        )
+    db.session.add(user)
+    db.session.commit()
+    return redirect('/login')
 
 @app.route('/auth', methods = ['POST','GET'])
 def auth():

@@ -53,14 +53,12 @@ class User(db.Model):
     birthUser = db.Column(db.Date, unique=True, nullable=False)
 
     def __init__(self, userName, userPassword,cpfUser,userEmail,userCellphone,birthUser):
-        self.usarName = userName
+        self.userName = userName
         self.userPassword = userPassword
         self.cpfUser = cpfUser
         self.userEmail = userEmail
         self.userCellphone = userCellphone
         self.birthUser = birthUser
-        
-
         
 # criação da rota para inclusão das informações no BD         
 @app.route('/new', methods = ['GET', 'POST'])
@@ -98,7 +96,7 @@ def cadastro():
     return render_template('/cadastro-user.html')
 
 
-@app.route('/newLogin')
+@app.route('/newUser', methods = ['GET','POST'])
 def newLogin():
     if request.method == 'POST':
         user = User(

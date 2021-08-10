@@ -19,6 +19,40 @@
     </div>
 
     <!--MAIN CONTENT-->
+    <form action="/newUser" method="POST">
+        <div class="infoUser">
+    
+          <div id="nomeUserAdd">
+            <p>Nome</p>
+            <input type="text" placeholder="Nome completo" name="userName" id="UserName"required >
+          </div>
+          <div id="emailUserAdd">
+            <p>E-mail</p>
+            <input type="text" placeholder="E-mail do usario" name="userEmail" id="userEmail"required >
+          </div>
+    
+          <div id="birthUserADD">
+            <p>Nascimento</p>
+            <input type="date" placeholder="Data Nascimento" name="birthUser"id="birthUser"required >
+          </div>
+    
+          <div id="cpfUserAdd">
+            <p>CPF do Usuário</p>
+            <input  type="number"placeholder="CPF do Usuário"name="cpfUser"id="cpfUser"required >
+          </div>
+          <div id="passwordUserAdd">
+            <p>Senha</p>
+            <input type="password" placeholder="Senha" name="userPassword" id="userPassword"required >
+          </div>
+          
+          <div id="passwordUserAdd">
+            <p>Confirmar Senha</p>
+            <input type="password" placeholder="Confirme sua Senha" name="userPassword" id="userPassword"required >
+          </div>
+    
+          
+        </div>
+        <button type="submit" id="botao-cadastro">Cadastre-se</button>
 
     <!--FOOTER CONTENT-->
     <div id="foot">

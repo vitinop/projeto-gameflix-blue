@@ -4,14 +4,18 @@ nav.innerHTML =
     <img src="../static/img/logomarca-2.svg">
     <ol>
     <li><a href="/">Home</a></li>
-    <li><a href="/todos-jogos">lista Jogos</a></li>
-    
-    <li><a href="/login">Login</a></li>
+    <li><a href="/todos-jogos">lista Jogos</a></li>    
     </ol>
     
     <div class="search-box">
       <button class="btn-search"><i class="fas fa-search"> <img src="/static/img/lupa.png"></i></button>
       <input type="text" class="input-search" placeholder="Buscar...">
+    </div>
+    </div class="loginBotao">
+    <ol>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/cadastro">Cadastre-se</a></li>
+    </ol>
     </div>
   </nav>`;
 

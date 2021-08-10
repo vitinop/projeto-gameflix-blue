@@ -1,5 +1,4 @@
 from enum import unique
-from typing_extensions import Required
 from flask import Flask, render_template, request, redirect, session, flash
 import flask
 from flask_mail import Mail, Message

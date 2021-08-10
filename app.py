@@ -85,6 +85,11 @@ def index():
 def login():
     return render_template('/login.html')
 
+@app.route('/cadastro')
+def cadastro():
+    return render_template('/cadastro-user.html')
+
+
 @app.route('/newLogin')
 def newLogin():
     if request.method == 'POST':

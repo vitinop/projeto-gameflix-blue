@@ -78,6 +78,7 @@ addTitle.innerHTML = `
             <option value="rpg">RPG</option>
             <option value="fps">Tiro em Primeira Pessoa - FPS</option>
             <option value="tps">Tiro em Terceira Pessoa - TPS</option>
+            <option value="rts">Estratégia - RTS</option>
             <option value="plataform">Plataforma</option>
             <option value="fighting">Luta</option>
             <option value="music">Musical</option>

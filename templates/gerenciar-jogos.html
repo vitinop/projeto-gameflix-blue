@@ -25,17 +25,17 @@
     <thead>
       <tr class="tabela_header">
 
-        <!-- <th>ID</th> -->
+        <th>ID</th>
         <th>NOME</th>
-        <!-- <th>DESCRIÇÃO</th> -->
-        <!-- <th>IMAGEM</th> -->
+        <th>DESCRIÇÃO</th>
+        <th>IMAGEM</th>
         <th>NOTA</th>
         <th>CLASSIFICAÇÃO</th>
         <th>GÊNERO</th>
         <th>DATA LANÇAMENTO</th>
         <th>PRODUTORA</th>
-        <!-- <th>TRAILLER</th> -->
-        <!-- <th>LOGO</th> -->
+        <th>TRAILLER</th>
+        <th>LOGO</th>
 
       </tr>
     </thead>
@@ -43,17 +43,17 @@
       <!-- for para exibição em tabela dos jogos cadastrados dentro do BD -->
       {% for p in jogos %}
       <tr>
-        <!-- <td>{{p.id}}</td> -->
+        <td>{{p.id}}</td>
         <td>{{p.nomeJogo}}</td>
-        <!-- <td>{{p.descricao}}</td> -->
-        <!-- <td>{{p.imagemLink}}</td> -->
+        <td><textarea style="resize: none" readonly>{{p.descricao}}</textarea> </td>
+        <td>{{p.imagemLink}}</td>
         <td>{{p.notaMetric}}</td>
         <td>{{p.classificacao}}</td>
         <td>{{p.genero}}</td>
         <td>{{p.dataLancamento}}</td>
         <td>{{p.produtora}}</td>
-        <!-- <td>{{p.trailler}}</td> -->
-        <!-- <td>{{p.logoLink}}</td> -->
+        <td>{{p.trailler}}</td>
+        <td>{{p.logoLink}}</td>
         <td>
           <!-- <a href="/read" class="botao">VISUALIZAR</a> -->
           <div class="botoesGerenciamento">
@@ -71,11 +71,11 @@
       <div class="infoJogo">
 
         <div id="nomeAdd">
-          <input type="text" placeholder="Nome do título" name="game_name" required id="game_name">
+          <input type="text" placeholder="Nome do título" name="game_name" id="game_name">
         </div>
 
         <div id="produtoraAdd">
-          <input type="text" placeholder="Produtora" name="game_producer" required id="game_producer">
+          <input type="text" placeholder="Produtora" name="game_producer" id="game_producer">
         </div>
 
         <div id="lacamentoAdd">
@@ -85,7 +85,7 @@
 
         <div id="notaAdd">
           <p>Nota Metacritic</p>
-          <input type="number" placeholder="0-100 " name="game_grade" id="game_grade" required>
+          <input type="number" placeholder="0-100 " name="game_grade" id="game_grade" >
         </div>
         <div class="caixasdeOpcoes">
           <div id="idadeRecomendadaAdd">
@@ -122,16 +122,15 @@
           </div>
         </div>
         <div id="descricaoAdd">
-          <textarea type="text" placeholder="Descrição do jogo..." name="game_description" id="game_description"
-            required></textarea>
+          <textarea type="text" placeholder="Descrição do jogo..." name="game_description" id="game_description"></textarea>
         </div>
 
 
         <div id="midiaAdd">
           <p>Mídia</p>
-          <input type="text" placeholder="URL do Trailer" name="game_trailer" required id="game_trailer">
-          <input type="text" placeholder="URL da Imagem" name="game_img" required id="game_img">
-          <input type="text" placeholder="URL da Logo" name="game_logo" required id="game_logo">
+          <input type="text" placeholder="URL do Trailer" name="game_trailer" id="game_trailer">
+          <input type="text" placeholder="URL da Imagem" name="game_img" id="game_img">
+          <input type="text" placeholder="URL da Logo" name="game_logo" id="game_logo">
         </div>
 
 

@@ -28,13 +28,13 @@
         <th>ID</th>
         <th>NOME</th>
         <th>DESCRIÇÃO</th>
-        <th>IMAGEM</th>
         <th>NOTA</th>
-        <th>CLASSIFICAÇÃO</th>
+        <th id="tableGrade">CLASSIFICAÇÃO</th>
         <th>GÊNERO</th>
-        <th>DATA LANÇAMENTO</th>
+        <th id="tableRelease">DATA LANÇAMENTO</th>
         <th>PRODUTORA</th>
         <th>TRAILLER</th>
+        <th>IMAGEM</th>
         <th>LOGO</th>
 
       </tr>
@@ -46,13 +46,13 @@
         <td>{{p.id}}</td>
         <td>{{p.nomeJogo}}</td>
         <td><textarea style="resize: none" readonly>{{p.descricao}}</textarea> </td>
-        <td>{{p.imagemLink}}</td>
         <td>{{p.notaMetric}}</td>
         <td>{{p.classificacao}}</td>
         <td>{{p.genero}}</td>
         <td>{{p.dataLancamento}}</td>
         <td>{{p.produtora}}</td>
         <td>{{p.trailler}}</td>
+        <td>{{p.imagemLink}}</td>
         <td>{{p.logoLink}}</td>
         <td>
           <!-- <a href="/read" class="botao">VISUALIZAR</a> -->

@@ -344,6 +344,13 @@ body {
   color: white;
   background:linear-gradient(90deg, rgba(248,221,117,1) 0%, rgba(233,142,80,1) 50%, rgba(202,100,58,1) 100%); 
 }
+#tableGrade{
+  width: 1rem;
+}
+#tableRelease{
+  width: 10rem;
+}
+
 
 .tabela td{
   padding: 0.1rem;

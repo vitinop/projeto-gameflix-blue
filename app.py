@@ -42,6 +42,17 @@ class Info_jogos(db.Model):
         self.produtora = produtora
         self.trailler = trailler
         self.logoLink = logoLink 
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement = True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    password = db.Column(db.String(120), unique=True, nullable=False)
+
+    def __init__(self, username, password):
+        self.usarname = username
+        self.password = password
+        
+
         
 # criação da rota para inclusão das informações no BD         
 @app.route('/new', methods = ['GET', 'POST'])
@@ -76,8 +87,9 @@ def login():
 
 @app.route('/auth', methods = ['POST','GET'])
 def auth():
+    user = User.query.all()
     if request.method == 'POST':
-        if request.form['user_name'] == 'Dorival' and request.form['password'] == 'Dorival' :
+        if User.query.filter_by(username = request.form['user_name']).first() and User.query.filter_by(password = request.form['password']).first():
             session['usuario_logado'] = True
             return redirect ('/gerenciar-jogos') 
         else:    
@@ -115,12 +127,7 @@ def delete(id):
     db.session.commit()
     return redirect('/gerenciar-jogos.html')
 
-# @app.route('/adicionar<id>')
-# def adicionar():
-#     if session['usuario_logado'] == None or 'usuario_logado' not in session:
-#         flash('Você não esta logado')
-#         return redirect ('/login')
-#     return render_template('/cadastro-jogos.html')
+
 
 #criação da rota para edição dos dados dentro do banco
 @app.route('/edit/<id>', methods = ['POST', 'GET'])
@@ -143,7 +150,6 @@ def edit(id):
     return render_template('/gerenciar-jogos.html', jogosEdit=jogosEdit)
 
 
-# @app.route('/adicionar/<id>')
 
 
 #rota de exibição dos jogos cadastrados

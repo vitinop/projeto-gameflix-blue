@@ -45,14 +45,20 @@ class Info_jogos(db.Model):
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement = True)
-    username = db.Column(db.String(80), unique=True, nullable=False)
-    password = db.Column(db.String(120), unique=True, nullable=False)
+    userName = db.Column(db.String(80), unique=True, nullable=False)
+    userPassword = db.Column(db.String(120), unique=True, nullable=False)
+    cpfUser = db.Column(db.Integer, unique=True, nullable=False)
+    userEmail = db.Column(db.String(120), unique=True, nullable=False)
+    userCellphone = db.Column(db.Integer, unique=True, nullable=False)
+    birthUser = db.Column(db.Date, unique=True, nullable=False)
 
-    def __init__(self, username, password):
-        self.usarname = username
-        self.password = password
-        
-
+    def __init__(self, userName, userPassword,cpfUser,userEmail,userCellphone,birthUser):
+        self.userName = userName
+        self.userPassword = userPassword
+        self.cpfUser = cpfUser
+        self.userEmail = userEmail
+        self.userCellphone = userCellphone
+        self.birthUser = birthUser
         
 # criação da rota para inclusão das informações no BD         
 @app.route('/new', methods = ['GET', 'POST'])
@@ -90,12 +96,16 @@ def cadastro():
     return render_template('/cadastro-user.html')
 
 
-@app.route('/newLogin')
+@app.route('/newUser', methods = ['GET','POST'])
 def newLogin():
     if request.method == 'POST':
         user = User(
-            request.form['username'],
-            request.form['password']
+            request.form['userName'],
+            request.form['userPassword'],
+            request.form['cpfUser'],
+            request.form['userEmail'],
+            request.form['userCellphone'],
+            request.form['birthUser']
         )
     db.session.add(user)
     db.session.commit()
@@ -105,7 +115,7 @@ def newLogin():
 def auth():
     user = User.query.all()
     if request.method == 'POST':
-        if User.query.filter_by(username = request.form['user_name']).first() and User.query.filter_by(password = request.form['password']).first():
+        if User.query.filter_by(username = request.form['userName']).first() and User.query.filter_by(password = request.form['userPassword']).first():
             session['usuario_logado'] = True
             return redirect ('/gerenciar-jogos') 
         else:    

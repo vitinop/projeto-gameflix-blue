@@ -110,8 +110,5 @@ addTitle.innerHTML = `
   </form>
 `
 
-const editTitle = document.querySelector('#editTitle');
-editTitle.innerHTML = `
-`
 
 

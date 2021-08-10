@@ -41,12 +41,10 @@ addTitle.innerHTML = `
     <div class="infoJogo">
 
       <div id="nomeAdd">
-        <p>Nome</p>
         <input type="text" placeholder="Nome do título" name="nomeJogo" required id="game_name">
       </div>
 
       <div id="produtoraAdd">
-        <p>Produtora</p>
         <input type="text" placeholder="Produtora" name="produtora" required id="game_producer">
       </div>
 
@@ -94,7 +92,6 @@ addTitle.innerHTML = `
         </div>
       </div>
       <div id="descricaoAdd">
-        <label for="game_description">Descrição</label>
         <textarea type="text" placeholder="Descrição do jogo..." name="descricao" id="game_description"
           required></textarea>
       </div>

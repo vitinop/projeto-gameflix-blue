@@ -128,17 +128,16 @@ body {
   color: #aaa;
   
 }
+
+/* Posicionamento de cada elemento utilizando conceitos Grid */
 #nomeAdd{
   grid-column: 1/4 ;
   grid-row: 1;
-  
 }
-
 
 #produtoraAdd{
   grid-column: 4/5;
   grid-row: 1;
-
 }
 
 #lancamentoAdd {
@@ -151,15 +150,16 @@ body {
   grid-row: 2;
 }
 
-
 #generoaAdd{
   grid-column: 5;
   grid-row: 2;
 }
+
 #caixasdeOpcoes{
   grid-column: 5;
   grid-row: 2;    
 }
+
 #descricaoAdd{
   grid-column: 1/5;
   grid-row: 3;
@@ -173,11 +173,12 @@ body {
   grid-column:1/5 ;
   grid-row: 4;
 }
-
+/* Estilização de caixas de opções */
 .caixasdeOpcoes option{ background-color:#0d1117 ;
   color: #F1F1F2;
 }
 
+/* Estilização de inputs */
 .infoJogo input,textarea{
   width: 100%;
   padding: 0.5rem 0.6rem;
@@ -194,21 +195,7 @@ body {
 
 }
 
-.anoAdd select {
-  border: 1px solid rgb(134, 7, 7);
-  width: 100%;
-  padding: 0.5rem 0.6rem;
-  margin: 8px 0;
-  background-color: transparent;
-  color:#aaa;
-  height: 50px;
-
-}
-
-.anoAdd select option:focus {
-  box-sizing: border-box;
-}
-
+/* Estilização de botão cadastrar  da Pag de cadastro*/
 #botao-cadastro {
   align-items: center;
   font-weight: bold;
@@ -226,7 +213,7 @@ body {
   opacity: 0.9;
 }
 
-
+/* Estilização de botões da Pag de Edição */
 #botao-aplicar-edicao{
   align-items: center;
   font-weight: bold;

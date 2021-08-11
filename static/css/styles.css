@@ -302,7 +302,6 @@ textarea {
 
 
 
-
 /* Inicio da estilização da pagina gerenciar Jorgos */
 .tabela {
   table-layout:fixed;
@@ -443,4 +442,20 @@ textarea {
 }
 
 /* Fim da estilização da pagina gerenciar Jorgos */
+
+
+/* Inicio da estilização da pagina about */
+
+#titulo-about{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+
+.equipeDiscricao{
+
+  
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

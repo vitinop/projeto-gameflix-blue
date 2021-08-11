@@ -85,7 +85,7 @@ def new():
 def index():
     session['usuario_logado'] = None
     jogos = Info_jogos.query.all()
-    return render_template('/index.html', jogos = jogos)
+    return render_template('/home.html', jogos = jogos)
 
 
 @app.route('/login')
@@ -113,6 +113,26 @@ def newUser():
     db.session.commit()
     return redirect('/login')
 
+@app.route('/editUsers')
+def editUser():
+    if session['usuario_logado'] == None or 'usuario_logado' not in session:
+        flash('Você não esta logado')
+        return redirect ('/login')
+    return render_template('/gerenciar-user.html')
+
+@app.route('/editUser/<id>', methods = ['POST', 'GET'])
+def edit_User(id):
+    editUser = User.query.get(id)
+    if request.method == 'POST':
+        editUser.userName = request.form['userName']
+        editUser.userPassword = request.form['userPassword']
+        editUser.cpfUser = request.form['cpfUser']
+        editUser.userEmail = request.form['userEmail']
+        editUser.userCellphone = request.form['userCellphone']
+        editUser.birthUser = request.form['birthUser']
+        db.session.commit()
+        return redirect('/editUsers')
+    return render_template('/gerenciar-user.html', editUser = editUser)
 
 @app.route('/auth', methods = ['POST','GET'])
 def auth():

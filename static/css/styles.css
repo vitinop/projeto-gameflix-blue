@@ -316,7 +316,7 @@ body {
 .tabela textarea{
   font-size:13px;
   margin:0.5rem;
-  height:7rem;
+  height:11rem;
   width:15rem;
 }
 .tabela iframe{
@@ -358,7 +358,7 @@ body {
   width: 13rem;
 }
 #tableToolsHead{
-  width: 15.8rem;
+  width: 10rem;
 }
 /* Blocos de Tabela - Conteudo */
 .tabela_conteudo{
@@ -391,24 +391,43 @@ body {
 
 }
 .listaBotoesGerenciamento{
-  width: 8.7rem;
+  margin: 1rem;
+  width: 8rem;
   display: flex;
+  flex-direction: column;
+  align-content: center;
   align-items: center;
   font-weight: bold;
   justify-content: flex-start;
-  text-align: left;
   list-style: none;
   
 }
-
-.listaBotoesGerenciamento ul{
-  text-align: center;
-  font-size: 18px;
+.listaBotoesGerenciamento img{
+  width: 1.6rem;
+}
+.listaBotoesGerenciamento ul{  
   line-height: 1.5;
- 
+}
+.listaBotoesGerenciamento li{
+  text-align: center;
+  font-size: 10px;
 }
 
-.botao {
+.botaoTool{
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}
+.botaoTool:hover {
+  opacity: 0.91;
+}
+.botaoTool img:hover {
+  transform:scale(1.2)
+}
+.botaoTitle {
 
   background-color: #f30000;
   border: none;
@@ -424,26 +443,12 @@ body {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.796);
 }
 
-.botao:hover {
+.botaoTitle:hover {
   opacity: 0.91;
 }
 
-.blocoDeAcao {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
 
-.blocoDeAcao h1 {
-  color: white;
-  box-shadow: 5px;
-  border-top: 1px solid coral;
-  border-bottom: 1px solid coral;
-  ;
-  padding: 10px;
-}
-
-#botao-cadastro {
+.botao-cadastro {
   align-items: center;
   font-weight: bold;
   margin: 2%;

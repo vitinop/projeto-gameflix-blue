@@ -3,7 +3,6 @@
 :root {
   --primary-color: #0d1117;
 }
-
 * {
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
@@ -11,7 +10,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: var(--primary-color);
 }
@@ -25,7 +23,6 @@ body {
   margin-right: auto;
   width: 150px;
 }
-
 /* Determinar qual tipo de dado entrará na formBox e formatação da mesma */
 .LoginBox input[type=text],
 .LoginBox input[type=password] {
@@ -40,7 +37,6 @@ body {
   color: #f5f5f5;
   background-color: transparent;
 }
-
 /* Estilização da caixa central principal */
 .LoginBox {
   font-weight: bold;
@@ -52,7 +48,6 @@ body {
 
 
 }
-
 /* Estilização dos botões da caixa central principal */
 .LoginBox button {
   font-weight: bold;
@@ -64,20 +59,16 @@ body {
   border: none;
   width: 30%;
 }
-
 /* Estilização ao passar o mouse sobre os botões da caixa central principal */
 .LoginBox button:hover {
   opacity: 0.7;
 }
-
 /* Estilização da caixa central secundaria*/
-
 .LoginInfo {
   padding: 3%;
   margin-left: auto;
   margin-right: auto;
 }
-
 /* Estilização do campo de ajuda, abaixo da caixa principal */
 .helpLinks li a {
 
@@ -87,14 +78,12 @@ body {
 
 
 }
-
 .helpLinks li a:hover {
   transition: color 1s;
   text-transform: uppercase;
   color: #f30000;
   font-size: 16px;
 }
-
 .helpLinks {
 
   text-align: center;
@@ -112,8 +101,8 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-
 /* Fim da Estilização da pagina de Login */
+
 
 
 
@@ -129,58 +118,47 @@ body {
   color: #aaa;
 
 }
-
 /* Posicionamento de cada elemento utilizando conceitos Grid */
 #nomeAdd {
   grid-column: 1/4;
   grid-row: 1;
 }
-
 #produtoraAdd {
   grid-column: 4/5;
   grid-row: 1;
 }
-
 #lancamentoAdd {
   grid-column: 1;
   grid-row: 2;
 }
-
 #notaAdd {
   grid-column: 2/4;
   grid-row: 2;
 }
-
 #generoaAdd {
   grid-column: 5;
   grid-row: 2;
 }
-
 #caixasdeOpcoes {
   grid-column: 5;
   grid-row: 2;
 }
-
 #descricaoAdd {
   grid-column: 1/5;
   grid-row: 3;
 }
-
 #descricaoAdd input {
   height: 20rem;
 }
-
 #midiaAdd {
   grid-column: 1/5;
   grid-row: 4;
 }
-
 /* Estilização de caixas de opções */
 .caixasdeOpcoes option {
   background-color: #0d1117;
   color: #F1F1F2;
 }
-
 /* Estilização de inputs */
 .infoJogo input,
 textarea {
@@ -194,12 +172,10 @@ textarea {
   color: #f5f5f5;
   background-color: transparent;
 }
-
 .infoJogo textarea {
   height: 13rem;
 
 }
-
 /*Inicio da Estilização de botão cadastrar  da Pag de cadastro de novos jogos */
 #botao-cadastro {
   align-items: center;
@@ -212,13 +188,44 @@ textarea {
   padding: 14px 20px;
   border: none;
 }
-
 #botao-cadastro:hover {
 
   opacity: 0.9;
 }
+/* Estilização de botões da Pag de Edição */
+#botao-aplicar-edicao {
+  align-items: center;
+  font-weight: bold;
+  margin: 1%;
+  margin-left: 40%;
+  color: #F1F1F2;
+  width: 20%;
+  background-color: #04AA6D;
+  padding: 14px 20px;
+  border: none;
+}
+#botao-aplicar-edicao:hover {
 
+  opacity: 0.9;
+}
+#botao-editando-cancel {
+  font-weight: bold;
+  margin: 1%;
+  margin-left: 40%;
+  color: #F1F1F2;
+  width: 20%;
+  background-color: #f30000;
+  padding: 14px 20px;
+  border: none;
+
+}
+#botao-editando-cancel:hover {
+
+  opacity: 0.9;
+}
 /* Fim da Estilização de Cadastrar e Editar novos jogos */
+
+
 
 
 
@@ -234,40 +241,33 @@ textarea {
   color: #aaa;
 
 }
-
 /* Posicionamento de cada elemento utilizando conceitos Grid */
 #nomeUserAdd {
   grid-column: 1/3;
   grid-row: 1;
 }
-
 #birthUserAdd {
   grid-column: 3/4;
   grid-row: 1;
 }
-
 #cpfUserAdd {
   grid-column: 3;
   grid-row: 2;
 }
-
 #emailUserAdd {
   grid-column: 1;
   grid-row: 2;
 
 }
-
 #celularlUserAdd {
   grid-column: 2;
   grid-row: 2;
 
 }
-
 #passwordUserAdd {
   grid-column: 1/3;
   grid-row: 3;
 }
-
 
 /* Estilização de inputs */
 .infoUser input {
@@ -281,9 +281,7 @@ textarea {
   color: #f5f5f5;
   background-color: transparent;
 }
-
 /* Estilização de botão cadastrar  da Pag de cadastro de novos usuarios*/
-
 #botaoRegistroUser {
   align-items: center;
   font-weight: bold;
@@ -295,58 +293,17 @@ textarea {
   padding: 14px 20px;
   border: none;
 }
-
 #botaoRegistroUser:hover {
 
   opacity: 0.9;
 }
-
 /* Fim da Estilização de botão cadastrar  da Pag de cadastro de novos usuarios */
 
-/* Estilização de botões da Pag de Edição */
-#botao-aplicar-edicao {
-  align-items: center;
-  font-weight: bold;
-  margin: 1%;
-  margin-left: 40%;
-  color: #F1F1F2;
-  width: 20%;
-  background-color: #04AA6D;
-  padding: 14px 20px;
-  border: none;
-}
-
-
-#botao-aplicar-edicao:hover {
-
-  opacity: 0.9;
-}
-
-#botao-editando-cancel {
-  font-weight: bold;
-  margin: 1%;
-  margin-left: 40%;
-  color: #F1F1F2;
-  width: 20%;
-  background-color: #f30000;
-  padding: 14px 20px;
-  border: none;
-
-}
-
-#botao-editando-cancel:hover {
-
-  opacity: 0.9;
-}
-
-
-/* Fim da Estilização de Cadastrar novos jogos */
 
 
 
 
 /* Inicio da estilização da pagina gerenciar Jorgos */
-
 .tabela {
   table-layout:fixed;
   width: 100%;
@@ -485,5 +442,5 @@ textarea {
 
 }
 
-
+/* Fim da estilização da pagina gerenciar Jorgos */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

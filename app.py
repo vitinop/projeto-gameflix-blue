@@ -87,9 +87,11 @@ def index():
     jogos = Info_jogos.query.all()
     return render_template('/index.html', jogos = jogos)
 
+
 @app.route('/login')
 def login():
     return render_template('/login.html')
+
 
 @app.route('/cadastro')
 def cadastro():
@@ -111,6 +113,7 @@ def newUser():
     db.session.commit()
     return redirect('/login')
 
+
 @app.route('/auth', methods = ['POST','GET'])
 def auth():
     user = User.query.all()
@@ -128,12 +131,14 @@ def about():
     session['usuario_logado'] = None
     return render_template('/about.html')
 
+
 @app.route('/cadastro-jogos')
 def adm_titulos():
     if session['usuario_logado'] == None or 'usuario_logado' not in session:
         flash('Você não esta logado')
         return redirect ('/login')
     return render_template('/cadastro-jogos.html')
+
 
 @app.route('/gerenciar-jogos')
 def adm_gerenciar_jogos():
@@ -142,6 +147,7 @@ def adm_gerenciar_jogos():
         return redirect ('/login')
     jogos = Info_jogos.query.all()
     return render_template('/gerenciar-jogos.html', jogos = jogos)
+
 
 @app.route('/delete/<id>') 
 def delete(id):
@@ -183,6 +189,7 @@ def edit(id):
 def todos_jogos():
     jogos = Info_jogos.query.all()
     return render_template('/todos-jogos.html', jogos=jogos)
+
 
 if __name__ == '__main__':
     db.create_all()

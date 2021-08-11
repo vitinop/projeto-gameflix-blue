@@ -476,8 +476,19 @@ body {
   font-weight: 600;
   color:#F1F1F2;
   
-
 }
+
+#about{
+  font-size: 1.5vw;
+  color:#F1F1F2;
+  text-justify: auto;
+}
+
+.p{
+  margin-left: 2%;
+  color:#22a6b3;
+}
+
 
 .titulos{
   display:flex;
@@ -496,7 +507,7 @@ body {
   justify-content: flex-start;
   justify-items:center;
   padding-left: 1vw;
-  /* text-align: justify; */
+  text-align: justify;
   text-align: start;
   margin-left: 1%;
   color:#22a6b3

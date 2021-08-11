@@ -66,7 +66,7 @@
                         <a class="thumbTile" href="#">
                             <img class="thumbTile__image"
                                 src="{{p.imagemLink}}"
-                                width="380" height="200" alt="Assasin´s Creed -Black Flag">
+                                width="380" height="200" alt="{{p.nomeJogo}}">
                         </a>
                     </div>
                     
@@ -80,6 +80,7 @@
         </section>
 
         <section class="thumbSection">
+            {% for p in jogos %}
             <h2 class="thumbTitle">Gênero</h2>
             <div class="thumbTiles swiper-container">
                 <div class="swiper-wrapper">
@@ -87,50 +88,22 @@
                     <div class="swiper-slide">
                         <a class="thumbTile" href="#">
                             <img class="thumbTile__image"
-                                src="../Imgs_Jogos/Assassin´sCreedIV–BlackFlag/Assassin´sCreedIV–BlackFlag_Capa.jpg"
-                                width="380" height="200" alt="Assasin´s Creed -Black Flag">
+                                src="{{p.imagemLink}}"
+                                width="380" height="200" alt="{{p.nomeJogo}}">
                         </a>
                     </div>
-                    <div class="swiper-slide">
-                        <a class="thumbTile" href="#">
-                            <img class="thumbTile__image" src="../Imgs_Jogos/GhostOfTsushima/GhostOfTsushima_Capa.jpg"
-                                alt="Ghost Of Tsushima">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="thumbTile" href="#">
-                            <img class="thumbTile__image" src="../Imgs_Jogos/DeadSpace/DeadSpace_Capa.jpg"
-                                alt="Dead Space">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="thumbTile" href="#">
-                            <img class="thumbTile__image" src="../Imgs_Jogos/MobileLegends/MobileLegends_Capa.png"
-                                alt="Mobile Legends">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="thumbTile" href="#">
-                            <img class="thumbTile__image" src="../Imgs_Jogos/TheWitcher3/TheWitcher3_Capa.jpg"
-                                alt="The Witcher 3">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="thumbTile" href="#">
-                            <img class="thumbTile__image"
-                                src="../Imgs_Jogos/BioShock–TheCollection/BioShock–TheCollection_Capa.jpg"
-                                alt="Bio Shock - The Collection">
-                        </a>
-                    </div>
+                   
                 </div>
 
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
+            {% endfor %}
         </section>
 
         <section class="thumbSection">
+            {% for p in jogos %}
             <h2 class="thumbTitle">Amados pela Crítica</h2>
             <div class="thumbTiles swiper-container">
                 <div class="swiper-wrapper">
@@ -138,47 +111,18 @@
                     <div class="swiper-slide">
                         <a class="thumbTile" href="#">
                             <img class="thumbTile__image"
-                                src="../Imgs_Jogos/Assassin´sCreedIV–BlackFlag/Assassin´sCreedIV–BlackFlag_Capa.jpg"
-                                width="380" height="200" alt="Assasin´s Creed -Black Flag">
+                                src="{{p.imagemLink}}"
+                                width="380" height="200" alt="{{p.nomeJogo}}">
                         </a>
                     </div>
-                    <div class="swiper-slide">
-                        <a class="thumbTile" href="#">
-                            <img class="thumbTile__image" src="../Imgs_Jogos/GhostOfTsushima/GhostOfTsushima_Capa.jpg"
-                                alt="Ghost Of Tsushima">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="thumbTile" href="#">
-                            <img class="thumbTile__image" src="../Imgs_Jogos/DeadSpace/DeadSpace_Capa.jpg"
-                                alt="Dead Space">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="thumbTile" href="#">
-                            <img class="thumbTile__image" src="../Imgs_Jogos/MobileLegends/MobileLegends_Capa.png"
-                                alt="Mobile Legends">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="thumbTile" href="#">
-                            <img class="thumbTile__image" src="../Imgs_Jogos/TheWitcher3/TheWitcher3_Capa.jpg"
-                                alt="The Witcher 3">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="thumbTile" href="#">
-                            <img class="thumbTile__image"
-                                src="../Imgs_Jogos/BioShock–TheCollection/BioShock–TheCollection_Capa.jpg"
-                                alt="Bio Shock - The Collection">
-                        </a>
-                    </div>
+                   
                 </div>
 
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
+            {% endfor %}
         </section>
     </main>
 

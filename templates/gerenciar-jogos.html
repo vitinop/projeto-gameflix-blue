@@ -61,11 +61,14 @@
         <td id="tableLogoContent"><img src="{{p.logoLink}}" alt=""></td>
         <td>
           <ul class="listaBotoesGerenciamento">
-            <li><a href="/read" class="botaoTool" >VISUALIZAR</br><img src="/static/img/view.png" alt="Ícone de visualização"></a></li>
+            <li><a href="/read" class="botaoTool">VISUALIZAR</br><img src="/static/img/view.png"
+                  alt="Ícone de visualização"></a></li>
             </br>
-            <li><a href="/delete/{{p.id}}" class="botaoTool">REMOVER</br><img src="/static/img/trash.png" alt="Ícone de exclusão"></a></li>
+            <li><a href="/delete/{{p.id}}" class="botaoTool">REMOVER</br><img src="/static/img/trash.png"
+                  alt="Ícone de exclusão"></a></li>
             </br>
-            <li><a href="/edit/{{p.id}}" class="botaoTool">EDITAR</br><img src="/static/img/edit.png" alt="Ícone de edição"></a></li>
+            <li><a href="/edit/{{p.id}}" class="botaoTool">EDITAR</br><img src="/static/img/edit.png"
+                  alt="Ícone de edição"></a></li>
           </ul>
           </div>
         </td>
@@ -115,32 +118,29 @@
             <p>Gênero</p>
             <select name="genero" id="game_gender" value="{{jogosEdit.genero}}">
               <option>{{jogosEdit.genero}}</option>
-              <option value="cardgame">Card Game</option>
               <option value="action">Ação</option>
-              <option value="rpg">RPG</option>
-              <option value="fps">Tiro em Primeira Pessoa - FPS</option>
-              <option value="tps">Tiro em Terceira Pessoa - TPS</option>
-              <option value="rts">Estratégia - RTS</option>
-              <option value="plataform">Plataforma</option>
-              <option value="fighting">Luta</option>
-              <option value="music">Musical</option>
-              <option value="horror">Terror</option>
-              <option value="stealth">Espionagem</option>
               <option value="adventure">Aventura</option>
-              <option value="action">Ação</option>
+              <option value="cardgame">Card Game</option>
+              <option value="stealth">Espionagem</option>
+              <option value="rts">Estratégia - RTS</option>
+              <option value="fighting">Luta</option>
               <option value="mmo"> MMO - Massively Multiplayer Online</option>
               <option value="moba"> MOBA - Multiplayer Online Battle Arena </option>
               <option value="openWorld"> Mundo Aberto </option>
+              <option value="music">Musical</option>
+              <option value="plataform">Plataforma</option>
+              <option value="rpg">RPG</option>
+              <option value="horror">Terror</option>
+              <option value="fps">Tiro em Primeira Pessoa - FPS</option>
+              <option value="tps">Tiro em Terceira Pessoa - TPS</option>
             </select>
           </div>
         </div>
         <div id="descricaoAdd">
           <p>Descrição do Jogo</p>
           <textarea type="text" name="descricao" id="game_description"
-            value="{{jogosEdit.descricao}}">"{{jogosEdit.descricao}}"</textarea>
+            value="{{jogosEdit.descricao}}">{{jogosEdit.descricao}}</textarea>
         </div>
-
-
         <div id="midiaAdd">
           <h2>Mídia</h2>
           </br>

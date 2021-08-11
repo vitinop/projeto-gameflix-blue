@@ -93,7 +93,7 @@ def login():
     return render_template('/login.html')
 
 
-@app.route('/cadastro')
+@app.route('/cadastroUser')
 def cadastro():
     return render_template('/cadastro-user.html')
 

@@ -115,6 +115,7 @@
             <p>Gênero</p>
             <select name="genero" id="game_gender" value="{{jogosEdit.genero}}">
               <option>{{jogosEdit.genero}}</option>
+              <option value="cardgame">Card Game</option>
               <option value="action">Ação</option>
               <option value="rpg">RPG</option>
               <option value="fps">Tiro em Primeira Pessoa - FPS</option>
@@ -134,7 +135,7 @@
           </div>
         </div>
         <div id="descricaoAdd">
-          <p>Descrição do Título</p>
+          <p>Descrição do Jogo</p>
           <textarea type="text" name="descricao" id="game_description"
             value="{{jogosEdit.descricao}}">"{{jogosEdit.descricao}}"</textarea>
         </div>

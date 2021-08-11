@@ -58,6 +58,7 @@
           <p>Gênero</p>
           <select name="genero" id="game_gender">
             <option>Selecione um ou mais gêneros</option>
+            <option value="cardgame">Card Game</option>
             <option value="action">Ação</option>
             <option value="rpg">RPG</option>
             <option value="fps">Tiro em Primeira Pessoa - FPS</option>
@@ -76,15 +77,20 @@
         </div>
       </div>
       <div id="descricaoAdd">
+        <p>Descrição do Jogo</p>
         <textarea type="text" placeholder="Descrição do jogo..." name="descricao" id="game_description"
           required></textarea>
       </div>
 
 
       <div id="midiaAdd">
-        <p>Mídia</p>
+        <h2>Mídia</h2>
+      </br>
+      <p>Trailer URL</p>
         <input type="text" placeholder="URL do Trailer" name="trailler" required id="game_trailer">
+      <p>Imagem URL</p>
         <input type="text" placeholder="URL da Imagem" name="imagemLink" required id="game_img">
+      <p>Logo URL</p>
         <input type="text" placeholder="URL da Logo" name="logoLink" required id="game_logo">
       </div>
 

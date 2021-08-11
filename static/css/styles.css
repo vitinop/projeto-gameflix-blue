@@ -480,32 +480,44 @@ body {
 }
 
 .titulos{
-  display: flex;
-  flex-direction: column;
+  display:flex;
+  justify-content:center;
   align-items: center;
   background-color: #fa0101;
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: 600;
   color:#F1F1F2;
+  
 }
+
+/* #about{
+  display:flex;
+  flex-wrap: wrap;
+  justify-items:center;
+  
+} */
 
 
 .equipe{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #04AA6D;
+  background-color: transparent;
   font-size: 1.5vw;
   font-weight: 600;
-  color:#F1F1F2;
+  color:#f2f0ff;
+  background-color:#22a6b3;
+  margin-top: 4px;
+  margin-right: 35%;
+  margin-left: 35%;
 
+  /* border-radius: 90%; */
 }
 
 
 .imgs-perfil img{
-  width: 25%;
+  width: 300px;
   border-radius: 50%;
-
 }
 
 .imgs-perfil{

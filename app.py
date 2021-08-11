@@ -191,7 +191,7 @@ def todos_jogos():
     return render_template('/todos-jogos.html', jogos=jogos)
 
 @app.route('/about')
-def about():
+def aboutUs():
     return render_template('/about.html')
 
 

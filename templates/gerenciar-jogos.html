@@ -93,7 +93,7 @@
           <div id="idadeRecomendadaAdd">
             <p>Classificação Indicativa</p>
             <select name="classificacao" id="game_parental_rating" value="{{jogosEdit.classificacao}}">
-              <option>Classificação Indicativa</option>
+              <option>{{jogosEdit.classificacao}}</option>
               <option value="18">+18 - Não recomendado para menores de 18 anos</option>
               <option value="16">+16 - Não recomendado para menores de 16 anos</option>
               <option value="14">+14 - Não recomendado para menores de 14 anos</option>
@@ -105,7 +105,7 @@
           <div id="generoaAdd">
             <p>Gênero</p>
             <select name="genero" id="game_gender" value="{{jogosEdit.genero}}">
-              <option>Selecione um ou mais gêneros</option>
+              <option>{{jogosEdit.genero}}</option>
               <option value="action">Ação</option>
               <option value="rpg">RPG</option>
               <option value="fps">Tiro em Primeira Pessoa - FPS</option>
@@ -124,7 +124,7 @@
           </div>
         </div>
         <div id="descricaoAdd">
-          <textarea type="text" name="descricao"          id="game_description" value="{{jogosEdit.descricao}}"></textarea>
+          <textarea type="text" name="descricao"          id="game_description" value="{{jogosEdit.descricao}}">"{{jogosEdit.descricao}}"</textarea>
         </div>
 
 

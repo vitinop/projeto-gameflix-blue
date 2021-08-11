@@ -190,6 +190,10 @@ def todos_jogos():
     jogos = Info_jogos.query.all()
     return render_template('/todos-jogos.html', jogos=jogos)
 
+@app.route('/route')
+def route():
+    return render_template('/about.html')
+
 
 if __name__ == '__main__':
     db.create_all()

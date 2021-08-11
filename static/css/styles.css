@@ -160,8 +160,7 @@ body {
   color: #F1F1F2;
 }
 /* Estilização de inputs */
-.infoJogo input,
-textarea {
+.infoJogo input,textarea {
   width: 100%;
   padding: 0.5rem 0.6rem;
   margin: 8px 0;
@@ -312,6 +311,16 @@ textarea {
   border-collapse: collapse;
   color: #F1F1F2;
   background:#1A1A1A;
+  font-size:13px;
+}
+.tabela textarea{
+  font-size:13px;
+  margin:0.5rem;
+  height:7rem;
+  width:15rem;
+}
+.tabela iframe{
+  padding:0.5rem;
 }
 /* Blocos de Tabela - head */
 #tableIdHead{
@@ -340,7 +349,7 @@ textarea {
   width: 10rem;
 }
 #tableTrailerHead {
-  width: 11rem;
+  width: 16.5rem;
 }
 #tableIMGHead{
   width: 13rem;
@@ -355,8 +364,12 @@ textarea {
 .tabela_conteudo{
   overflow-wrap: break-word;
 }
+.tabela_conteudo iframe{
+  padding-top: 0.5rem;
+}
 .tabela_conteudo img{
-  width: 5rem;
+  padding-top: 0.5rem;
+  width: 9rem;
 }
 
 .tabela td {

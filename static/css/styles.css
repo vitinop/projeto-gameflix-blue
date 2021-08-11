@@ -355,6 +355,9 @@ textarea {
 .tabela_conteudo{
   overflow-wrap: break-word;
 }
+.tabela_conteudo img{
+  width: 5rem;
+}
 
 .tabela td {
   padding: 0.1rem;

@@ -99,7 +99,7 @@ def cadastro():
 
 
 @app.route('/newUser', methods = ['GET','POST'])
-def newLogin():
+def newUser():
     if request.method == 'POST':
         user = User(
             request.form['userName'],
@@ -118,7 +118,7 @@ def newLogin():
 def auth():
     user = User.query.all()
     if request.method == 'POST':
-        if User.query.filter_by(username = request.form['userName']).first() and User.query.filter_by(password = request.form['userPassword']).first():
+        if User.query.filter_by(userName = request.form['userName']).first() and User.query.filter_by(userPassword = request.form['userPassword']).first():
             session['usuario_logado'] = True
             return redirect ('/gerenciar-jogos') 
         else:    

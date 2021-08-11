@@ -73,26 +73,26 @@
       <div class="infoJogo">
 
         <div id="nomeAdd">
-          <input type="text" placeholder="Nome do título" name="game_name" id="game_name">
+          <input type="text" placeholder="Nome do título" name="nomeJogo" id="game_name" value="{{jogosEdit.nomeJogo}}">
         </div>
 
         <div id="produtoraAdd">
-          <input type="text" placeholder="Produtora" name="game_producer" id="game_producer">
+          <input type="text" placeholder="Produtora" name="produtora" id="game_producer" value="{{jogosEdit.produtora}}">
         </div>
 
         <div id="lacamentoAdd">
           <p>Lançamento</p>
-          <input id="ano" type="number" value="2021">
+          <input id="ano" type="number" name="dataLancamento" value="{{jogosEdit.dataLancamento}}">
         </div>
 
         <div id="notaAdd">
           <p>Nota Metacritic</p>
-          <input type="number" placeholder="0-100 " name="game_grade" id="game_grade">
+          <input type="number" placeholder="0-100 " name="notaMetric" id="game_grade" value="{{jogosEdit.notaMetric}}">
         </div>
         <div class="caixasdeOpcoes">
           <div id="idadeRecomendadaAdd">
             <p>Classificação Indicativa</p>
-            <select name="game_parental_rating" id="game_parental_rating">
+            <select name="game_parental_rating" name="classificacao" id="game_parental_rating" value="{{jogosEdit.classificacao}}">
               <option>Classificação Indicativa</option>
               <option value="18">+18 - Não recomendado para menores de 18 anos</option>
               <option value="16">+16 - Não recomendado para menores de 16 anos</option>
@@ -104,7 +104,7 @@
           </div>
           <div id="generoaAdd">
             <p>Gênero</p>
-            <select name="game_gender" id="game_gender">
+            <select name="game_gender" name="genero" id="game_gender" value="{{jogosEdit.genero}}">
               <option>Selecione um ou mais gêneros</option>
               <option value="action">Ação</option>
               <option value="rpg">RPG</option>
@@ -124,16 +124,16 @@
           </div>
         </div>
         <div id="descricaoAdd">
-          <textarea type="text" placeholder="Descrição do jogo..." name="game_description"
-            id="game_description"></textarea>
+          <textarea type="text" name="descricao" placeholder="Descrição do jogo..." name="game_description"
+            id="game_description" value="{{jogosEdit.descricao}}"></textarea>
         </div>
 
 
         <div id="midiaAdd">
           <p>Mídia</p>
           <input type="text" placeholder="URL do Trailer" name="game_trailer" id="game_trailer">
-          <input type="text" placeholder="URL da Imagem" name="game_img" id="game_img">
-          <input type="text" placeholder="URL da Logo" name="game_logo" id="game_logo">
+          <input type="text" placeholder="URL da Imagem" name="game_img" id="game_img" value="{{jogosEdit.trailler}}">
+          <input type="text" placeholder="URL da Logo" name="game_logo" id="game_logo" value="{{jogosEdit.logoLink}}">
         </div>
 
 

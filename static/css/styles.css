@@ -447,15 +447,34 @@ textarea {
 /* Inicio da estilização da pagina about */
 
 #titulo-about{
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
+  padding: 4rem;
+  background-color: #fa0101;
+  font-size: 3vw;
+  font-weight: 600;
+  
 }
 
 
 .equipeDiscricao{
 
-  
+
+}
+
+
+.imgs-perfil img{
+  width: 25%;
+  border-radius: 50%;
+
+}
+
+.imgs-perfil{
+  display: flex;
+  justify-content: center;
+
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

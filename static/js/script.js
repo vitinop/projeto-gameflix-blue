@@ -25,7 +25,7 @@ foot.innerHTML =
 <footer>
   <ul class="list-inline-footer">
     <li class="list-inline-item"><a href="#">Suporte</a></li>
-    <li class="list-inline-item"><a href="/about">Sobre</a></li>
+    <li class="list-inline-item"><a href="#">Sobre</a></li>
     <li class="list-inline-item"><a href="#">Mapa do Site</a></li>
     <li class="list-inline-item"><a href="#">Termos de Uso</a></li>
   </ul>
@@ -78,7 +78,6 @@ addTitle.innerHTML = `
             <option value="rpg">RPG</option>
             <option value="fps">Tiro em Primeira Pessoa - FPS</option>
             <option value="tps">Tiro em Terceira Pessoa - TPS</option>
-            <option value="rts">Estratégia - RTS</option>
             <option value="plataform">Plataforma</option>
             <option value="fighting">Luta</option>
             <option value="music">Musical</option>
@@ -112,5 +111,75 @@ addTitle.innerHTML = `
   </form>
 `
 
+const myslide = document.querySelectorAll('.myslider'),
+  dot = document.querySelectorAll('.dot');
 
+let counter = 1;
+slidefun(counter);
+
+let timer = setInterval(autoslide, 8000);
+function autoslide(){
+  counter +=1;
+  slidefun(counter);
+}
+function plusSlides(n){
+  counter +=n;
+  slidefun(counter);
+  resetTimer();
+}
+function currentslide(n){
+  counter = n;
+  slidefun(counter);
+  resetTimer();
+}
+function resetTimer(){
+  clearInterval(timer);
+  timer = setInterval(autoslide, 8000);
+}
+function slidefun(n){
+  let i;
+  for (i = 0; i < myslide.length; i++){
+    myslide[i].style.display = "none";
+  }
+  for(i = 0; i <dot.length;i++) {
+    dot[i].classList.remove('active');
+  }
+}
+
+
+
+
+
+const description = document.getElementsByClassName("swiper-slide");
+// Get the modal
+let modal = document.querySelector("#myModal");
+
+// Get the button that opens the modal
+let btn = document.querySelector("#myBtn");
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+description.forEach(element => {
+  element.addEventListener('click', function(){
+    alert('funcionou')
+  })
+});
 

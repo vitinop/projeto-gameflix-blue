@@ -1,0 +1,23 @@
+@import url("../css/header-footer.css");
+
+:root {
+  --primary-color: #0d1117;
+}
+* {
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--primary-color);
+}
+.topo{
+    display: flex;
+    flex-direction: row;
+    
+}
+.topo img{padding: 3rem;
+    width:20rem;
+}

@@ -35,6 +35,7 @@ foot.innerHTML =
 </footer>
 </div>`;
 
+
 const myslide = document.querySelectorAll('.myslider'),
   dot = document.querySelectorAll('.dot');
 
@@ -65,14 +66,14 @@ function slidefun(n){
   for (i = 0; i < myslide.length; i++){
     myslide[i].style.display = "none";
   }
-  for(i = 0; i <dot.length;i++) {
+  for(i = 0; i < dot.length;i++) {
     dot[i].classList.remove('active');
   }
-  if(n >myslide.lenght){
+  if(n >myslide.length){
     counter = 1;
   }
   if(n<1){
-    counter = myslide.lenght;
+    counter = myslide.length;
   }
   myslide[counter -1].style.display = "block";
   dot[counter - 1].classList.add('active');

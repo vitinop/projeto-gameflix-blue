@@ -52,9 +52,10 @@
         <td id="tableGenderContent">{{p.genero}}</td>
         <td id="tableReleaseContent">{{p.dataLancamento}}</td>
         <td id="tableProducerContent">{{p.produtora}}</td>
-        <td id="tableTrailerContent">{{p.trailler}}</td>
-        <td id="tableIMGContent">{{p.imagemLink}}</td>
-        <td id="tableLogoContent">{{p.logoLink}}</td>
+        <td id="tableTrailerContent"> <iframe width="560" height="315" src="{{p.trailler}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </td>
+        <td id="tableIMGContent"><img src="{{p.imagemLink}}" alt=""></td>
+        <td id="tableLogoContent"><img src="{{p.logoLink}}" alt=""></td>
         <td>
           <ul class="listaBotoesGerenciamento">
             <li><a href="/read" class="botao">VISUALIZAR</a></li>

@@ -490,12 +490,18 @@ body {
   
 }
 
-/* #about{
+.about{
   display:flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   justify-items:center;
+  padding-left: 1vw;
+  /* text-align: justify; */
+  text-align: start;
+  margin-left: 1%;
+  color:#22a6b3
   
-} */
+}
 
 
 .equipe{

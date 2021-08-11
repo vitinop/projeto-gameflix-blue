@@ -514,6 +514,11 @@ body {
   
 }
 
+.about-me{
+  margin-left: 2vw;
+  color:#22a6b3;
+
+}
 
 .equipe{
   display: flex;

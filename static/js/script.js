@@ -99,9 +99,13 @@ addTitle.innerHTML = `
 
 
       <div id="midiaAdd">
-        <p>Mídia</p>
+        <h2>Mídia</h2>
+        </br>
+        <p>Trailer URL</p>
         <input type="text" placeholder="URL do Trailer" name="trailler" required id="game_trailer">
+        <p>Imagem URL</p>
         <input type="text" placeholder="URL da Imagem" name="imagemLink" required id="game_img">
+        <p>Logo URL</p>
         <input type="text" placeholder="URL da Logo" name="logoLink" required id="game_logo">
       </div>
 

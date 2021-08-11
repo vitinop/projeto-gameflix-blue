@@ -33,7 +33,7 @@
         <th id="tableGenderHead">GÊNERO</th>
         <th id="tableReleaseHead">LANÇAMENTO</th>
         <th id="tableProducerHead">PRODUTORA</th>
-        <th id="tableTrailerHead">TRAILLER</th>
+        <th id="tableTrailerHead">TRAILER</th>
         <th id="tableIMGHead">IMAGEM</th>
         <th id="tableLogoHead">LOGO</th>
         <th id="tableToolsHead">FERRAMENTAS</th>
@@ -73,10 +73,12 @@
       <div class="infoJogo">
 
         <div id="nomeAdd">
+          <p>Nome do título</p>
           <input type="text" placeholder="Nome do título" name="nomeJogo" id="game_name" value="{{jogosEdit.nomeJogo}}">
         </div>
 
         <div id="produtoraAdd">
+          <p>Produtora</p>
           <input type="text" placeholder="Produtora" name="produtora" id="game_producer" value="{{jogosEdit.produtora}}">
         </div>
 
@@ -110,6 +112,7 @@
               <option value="rpg">RPG</option>
               <option value="fps">Tiro em Primeira Pessoa - FPS</option>
               <option value="tps">Tiro em Terceira Pessoa - TPS</option>
+              <option value="rts">Estratégia - RTS</option>
               <option value="plataform">Plataforma</option>
               <option value="fighting">Luta</option>
               <option value="music">Musical</option>
@@ -124,14 +127,19 @@
           </div>
         </div>
         <div id="descricaoAdd">
-          <textarea type="text" name="descricao"          id="game_description" value="{{jogosEdit.descricao}}">"{{jogosEdit.descricao}}"</textarea>
+          <p>Descrição do Título</p>
+          <textarea type="text" name="descricao" id="game_description" value="{{jogosEdit.descricao}}">"{{jogosEdit.descricao}}"</textarea>
         </div>
 
 
         <div id="midiaAdd">
-          <p>Mídia</p>
+          <h2>Mídia</h2>
+          </br>
+          <p>Trailer URL</p>
           <input type="text" placeholder="URL do Trailer" name="trailler" id="game_trailer" value="{{jogosEdit.trailler}}">
+          <p>Imagem URL</p>
           <input type="text" placeholder="URL da Imagem" name="imagemLink" id="game_img" value="{{jogosEdit.imagemLink}}">
+          <p>Logo URL</p>
           <input type="text" placeholder="URL da Logo" name="logoLink" id="game_logo" value="{{jogosEdit.logoLink}}">
         </div>
 

@@ -54,7 +54,7 @@ body {
 }
 
 .equipeContainer {
-    margin-top: 2rem;
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,10 +67,11 @@ body {
     text-align: center;
 }
 .equipeE{
+    background: #1A1A1A;
+    background-repeat: no-repeat;
     padding: 1rem;
     display:flex;
-    flex-direction: row;
-    background: var(--box-color1);
+    flex-direction: row;   
     text-align: justify;
 }
 
@@ -84,4 +85,19 @@ body {
 
 .equipeContainer img {
     height: 20rem;
+}
+
+
+.social img {
+    height: 3rem;
+    flex-direction: row;
+    transition:.1s;
+}
+
+.social img:hover {
+    transform:scale(1.2)
+}
+.about-me {
+    padding: 1rem;
+    width: 65rem;
 }

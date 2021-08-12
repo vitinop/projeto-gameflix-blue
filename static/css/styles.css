@@ -629,14 +629,26 @@ body {
   font-size: 1.2rem;
 }
 
-
-
 .h3{
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
+.botao-contato{
+  align-items: center;
+  font-weight: bold;
+  margin: 2%;
+  margin-left: 40%;
+  color: #F1F1F2;
+  flex-direction: column;
+  width: 20%;
+  background-color: #04AA6D;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+
+}
 
 
 

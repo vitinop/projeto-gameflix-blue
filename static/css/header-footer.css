@@ -7,6 +7,7 @@ nav {background-color: #0d1117;
     justify-content: flex-start;
     text-align: center;
     padding: 0.5rem 1rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav img {
@@ -197,3 +198,5 @@ nav ol li:hover a {
     margin-right: auto;
     width: 150px;
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

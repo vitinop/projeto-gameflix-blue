@@ -19,8 +19,8 @@
   </div>
 
   <!--MAIN CONTENT-->
-  <div class="addNovoTituloBotao"><a href="/cadastro-jogos" class="botaoTitle">ADICIONAR NOVO TÍTULO </a><br><br></div>
-
+  <div class="addNovoTituloBotao"><a href="/cadastro-jogos" class="botaoTitle">ADICIONAR NOVO TÍTULO </a>
+  <a href="/editUsers" class="botaoTitle">GERENCIAR USUÁRIOS</a></div>
   <table class="tabela">
     <thead>
       <tr class="tabela_header">
@@ -61,7 +61,7 @@
         <td id="tableLogoContent"><img src="{{p.logoLink}}" alt=""></td>
         <td>
           <ul class="listaBotoesGerenciamento">
-            <li><a href="/read" class="botaoTool">VISUALIZAR</br><img src="/static/img/view.png"
+            <li><a href="/template-jogos/{{p.id}}" class="botaoTool">VISUALIZAR</br><img src="/static/img/view.png"
                   alt="Ícone de visualização"></a></li>
             </br>
             <li><a href="/delete/{{p.id}}" class="botaoTool">REMOVER</br><img src="/static/img/trash.png"

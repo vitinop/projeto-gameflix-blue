@@ -550,7 +550,7 @@ body {
 }
 #emailContato{
   grid-column: 1/3;
-  grid-row: ;
+  grid-row: 2;
 }
 #msgContato input {
   height: 30rem;

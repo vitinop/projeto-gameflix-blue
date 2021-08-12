@@ -26,6 +26,7 @@ body {
 
 
 .viewJogo iframe{
+    margin-top: 2rem;
     margin-left: 20%;
     align-items: right;
     position:absolute;
@@ -37,9 +38,9 @@ body {
 
 }
 #logomarcaJogo img{
-    margin-left:15rem;
-    padding:1rem;
-    width:20rem;
+    margin-left:10rem;
+    
+    height: 15rem;
 }
 .caixainformacoesJogos{
     display: flex;
@@ -56,9 +57,9 @@ body {
 
 .subCaixainformacoes p{
     text-align: justify;
-
+    
     color:#f5f5f5;
-    padding:1rem;
+    padding:2rem;
     
 }
 .subCaixainformacoes ul{

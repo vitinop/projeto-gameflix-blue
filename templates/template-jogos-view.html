@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Gameflix |  {% for p in jogos %} {{p.nomeJogo}} {% endfor %} </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameflix | {% for p in jogos %} {{p.nomeJogo}} {% endfor %} </title>
     <link rel="shortcut icon" href="../static/img/favicon.ico">
     <link rel="stylesheet" href="../static/css/template-jogos-style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    
+
 
 </head>
 
@@ -19,38 +19,49 @@
     <div id="nav"></div>
 
     <!-- MAIN CONTENT -->
-    <div class="topo">
-        <img  src="/Imgs_Jogos/AgeofEmpiresIII–Definitive/AgeofEmpiresIII–Definitive_Logo.png"alt="Ícone do jogo {{p.nomeJogo}}">
+    <div class="viewJogo">
+        <div><iframe src="https://www.youtube.com/embed/fCcRNUlE7ek" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div class="caixainformacoesJogos">
+            <img src="/Imgs_Jogos/AgeofEmpiresIII–Definitive/AgeofEmpiresIII–Definitive_Logo.png"
+                alt="Ícone do jogo {{p.nomeJogo}}">
+            
+            <div class="subCaixainformacoes">
+                <p>Age of Empires III - Definitive Edition é uma versão remasterizada pela Microsoft do clássico título
+                    de
+                    estratégia Age of Empires 3, lançado originalmente em 2005.
+                    Produzida pelo Xbox Game Studios em uma parceria com as desenvolvedoras Tantalus Media e Forgotten
+                    Empires,
+                    a nova versão reúne todas as DLCs e traz diversas melhorias na jogabilidade do game.</p>
+
+                <!-- {{p.nomeJogo}}
+            {{p.descricao}}
+            {{p.classificacao}}
+            {{p.notaMetric}}
+            {{p.genero}}
+            {{p.dataLancamento}}
+            {{p.produtora}} -->
+                <hr>
+                <ul>
+                    <li>Nome do títulos: {{p.nomeJogo}}</li>
+                    <li>Classificação indicativa: 12 Anos</li>
+                    <li>Nota Metacritic: 85</li>
+                    <li>Gênero: Estratégia</li>
+                    <li>Lançamento:2019</li>
+                    <li>Produtora: Microsoft Studios</li>
+                </ul>
+            </div>
+
+        </div>
     </div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/fCcRNUlE7ek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <div class="informacoesJogos">
-    <img id="capa" src="/Imgs_Jogos/AgeofEmpiresIII–Definitive/AgeofEmpiresIII–Definitive_Capa.jpg" alt="Capa do jogo {{p.nomeJogo}}">
-    <h1>Age of Empires III - Definitive Edition</h1>
-    <p>Age of Empires III - Definitive Edition é uma versão remasterizada pela Microsoft do clássico título de 
-    estratégia Age of Empires 3, lançado originalmente em 2005. 
-    Produzida pelo Xbox Game Studios em uma parceria com as desenvolvedoras Tantalus Media e Forgotten Empires, 
-    a nova versão reúne todas as DLCs e traz diversas melhorias na jogabilidade do game.</p>
 
-    <!-- {{p.nomeJogo}}
-    {{p.descricao}}
-    {{p.classificacao}}
-    {{p.notaMetric}}
-    {{p.genero}}
-    {{p.dataLancamento}}
-    {{p.produtora}} -->
-    <ul>
-        <li>Classificação indicativa: 12 Anos</li>
-        <li>Nota Metacritic: 85</li>
-        <li>Gênero: Estratégia</li>
-        <li>Lançamento:2019</li>
-        <li>Produtora: Microsoft Studios</li>
-    </ul>
 
-    </div>
     <!--FOOTER CONTENT-->
     <div id="foot"></div>
-   
+
 </body>
 <script src="../static/js/script.js"></script>
 

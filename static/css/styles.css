@@ -590,4 +590,19 @@ body {
 
 }
 
+
+/* Inicio da estilização da pagina Contact */
+
+.h3{
+  padding: 3rem 10rem 3rem 10rem;
+  display: grid;
+  place-items: center;
+  
+
+}
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

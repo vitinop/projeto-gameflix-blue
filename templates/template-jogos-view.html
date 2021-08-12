@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gameflix | {% for p in jogos %} {{p.nomeJogo}} {% endfor %} </title>
+    
     <link rel="shortcut icon" href="../static/img/favicon.ico">
     <link rel="stylesheet" href="../static/css/template-jogos-style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +19,16 @@
     <div id="nav"></div>
 
     <!-- MAIN CONTENT -->
+    
     <div class="viewJogo">
-        {% for a in jogos %}
+        {% for a in templateJogos %}
         <div><iframe src="{{a.trailler}}" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
         <div class="caixainformacoesJogos">
             <img src="{{a.logoLink}}"
-                alt="Ícone do jogo {{p.nomeJogo}}">
+                alt="Ícone do jogo {{a.nomeJogo}}">
             
             <div class="subCaixainformacoes">
                 <p>{{a.descricao}}</p>
@@ -45,7 +46,9 @@
             </div>
 
         </div>
+        {% endfor %}
     </div>
+    
 
 
 

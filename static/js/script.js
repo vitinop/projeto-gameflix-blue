@@ -14,7 +14,7 @@ nav.innerHTML =
     </div class="loginBotao">
     <ol>
     <li><a href="/login">Login</a></li>
-    <li><a href="/cadastro">Cadastre-se</a></li>
+    <li><a href="/cadastroUser">Cadastre-se</a></li>
     </ol>
     </div>
   </nav>`;

@@ -259,6 +259,19 @@ def about():
     session['usuario_logado'] = None
     return render_template('/about.html')
 
+@app.route('/contato')
+def contato():
+    return render_template('/')
+
+@app.route('/template-jogos')
+def template_jogos():
+    return render_template('/template-jogos-view.html')
+
+@app.route('/template-jogos/<id>')
+def jogo(id):
+    jogos = Info_jogos.query.get(id)
+    return render_template('/template-jogos-view.html', jogos=jogos)
+
 
 if __name__ == '__main__':
     db.create_all()

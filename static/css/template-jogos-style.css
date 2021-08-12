@@ -12,12 +12,68 @@
 }
 body {
   background-color: var(--primary-color);
+  
+  /* margin-right: auto; */
 }
-.topo{
+.viewJogo{
+    margin-left: 5%;
+    margin-right: 5%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+
+
+.viewJogo iframe{
+    margin-left: 20%;
+    align-items: right;
+    position:absolute;
+    padding-left:18rem;
+    width: 66rem;
+    height: 35rem;
+    z-index: 1;
+    align-items: flex-end;
+
+}
+.caixainformacoesJogos img{
+    margin-left:10rem;
+    padding:1rem;
+    width:20rem;
+}
+.caixainformacoesJogos{
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    background: rgb(2,0,36);
+    background: linear-gradient(280deg, rgba(13,17,23,0.1) 0%, rgba(13,17,23,1) 84%, rgba(13,17,23,0.5) 100%);
+    margin-left:auto;
+    margin-right: auto;
+    align-items: flex-start;
+    height:78%;
+    width:100%;
+}
+
+.caixainformacoesJogos p{
+    text-align: justify;
+
+    color:#f5f5f5;
+    padding:1rem;
     
 }
-.topo img{padding: 3rem;
-    width:20rem;
+.caixainformacoesJogos ul{
+    padding:1rem;
+    text-align: center;
+    color:#f5f5f5;
+    list-style: none;
+    
+}
+.subCaixainformacoes {
+    width:40rem;
+    background-color:#1A1A1A;
+}
+.subCaixainformacoes hr{
+    margin-left:auto;
+    margin-right: auto;
+    width: 50%;
 }

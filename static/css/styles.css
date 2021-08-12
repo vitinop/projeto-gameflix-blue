@@ -10,12 +10,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: var(--primary-color);
 }
 
 /* Inicio da Estilização da pagina de Login */
 /* Logomarca do topo - alinhamento e tamanho  */
+
 .logomarca img {
   padding-top: 3rem;
   display: block;
@@ -23,7 +25,9 @@ body {
   margin-right: auto;
   width: 150px;
 }
+
 /* Determinar qual tipo de dado entrará na formBox e formatação da mesma */
+
 .LoginBox input[type=text],
 .LoginBox input[type=password] {
   width: 100%;
@@ -37,7 +41,9 @@ body {
   color: #f5f5f5;
   background-color: transparent;
 }
+
 /* Estilização da caixa central principal */
+
 .LoginBox {
   font-weight: bold;
   margin-left: auto;
@@ -46,9 +52,10 @@ body {
   flex-direction: column;
   width: 25%;
 
-
 }
+
 /* Estilização dos botões da caixa central principal */
+
 .LoginBox button {
   font-weight: bold;
   background-color: #04AA6D;
@@ -58,32 +65,40 @@ body {
   margin-left: 25%;
   border: none;
   width: 30%;
+  cursor: pointer;
 }
+
 /* Estilização ao passar o mouse sobre os botões da caixa central principal */
+
 .LoginBox button:hover {
   opacity: 0.7;
 }
+
 /* Estilização da caixa central secundaria*/
+
 .LoginInfo {
   padding: 3%;
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Estilização do campo de ajuda, abaixo da caixa principal */
+
 .helpLinks li a {
 
   font-size: 15px;
   color: #f5f5f5;
   text-decoration: none;
 
-
 }
+
 .helpLinks li a:hover {
   transition: color 1s;
   text-transform: uppercase;
   color: #f30000;
   font-size: 16px;
 }
+
 .helpLinks {
 
   text-align: center;
@@ -101,6 +116,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
+
 /* Fim da Estilização da pagina de Login */
 
 
@@ -108,6 +124,7 @@ body {
 
 
 /* Inicio da Estilização de Cadastrar e Editar novos jogos */
+
 .infoJogo {
   display: grid;
   width: 100%;
@@ -118,48 +135,62 @@ body {
   color: #aaa;
 
 }
+
 /* Posicionamento de cada elemento utilizando conceitos Grid */
+
 #nomeAdd {
   grid-column: 1/4;
   grid-row: 1;
 }
+
 #produtoraAdd {
   grid-column: 4/5;
   grid-row: 1;
 }
+
 #lancamentoAdd {
   grid-column: 1;
   grid-row: 2;
 }
+
 #notaAdd {
   grid-column: 2/4;
   grid-row: 2;
 }
+
 #generoaAdd {
   grid-column: 5;
   grid-row: 2;
 }
+
 #caixasdeOpcoes {
   grid-column: 5;
   grid-row: 2;
 }
+
 #descricaoAdd {
   grid-column: 1/5;
   grid-row: 3;
 }
+
 #descricaoAdd input {
   height: 20rem;
 }
+
 #midiaAdd {
   grid-column: 1/5;
   grid-row: 4;
 }
+
 /* Estilização de caixas de opções */
+
 .caixasdeOpcoes option {
   background-color: #0d1117;
   color: #F1F1F2;
 }
+
 /* Estilização de inputs */
+
 .infoJogo input,textarea {
   width: 100%;
   padding: 0.5rem 0.6rem;
@@ -176,6 +207,7 @@ body {
 
 }
 /*Inicio da Estilização de botão cadastrar  da Pag de cadastro de novos jogos */
+
 #botao-cadastro {
   align-items: center;
   font-weight: bold;
@@ -186,12 +218,16 @@ body {
   background-color: #04AA6D;
   padding: 14px 20px;
   border: none;
+  cursor: pointer;
 }
+
 #botao-cadastro:hover {
 
   opacity: 0.9;
+  
 }
 /* Estilização de botões da Pag de Edição */
+
 #botao-aplicar-edicao {
   align-items: center;
   font-weight: bold;
@@ -202,7 +238,9 @@ body {
   background-color: #04AA6D;
   padding: 14px 20px;
   border: none;
+  cursor: pointer;
 }
+
 #botao-aplicar-edicao:hover {
 
   opacity: 0.9;
@@ -216,6 +254,7 @@ body {
   background-color: #f30000;
   padding: 14px 20px;
   border: none;
+  cursor: pointer;
 
 }
 #botao-editando-cancel:hover {
@@ -291,6 +330,7 @@ body {
   background-color: #04AA6D;
   padding: 14px 20px;
   border: none;
+  cursor: pointer;
 }
 #botaoRegistroUser:hover {
 
@@ -388,6 +428,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  cursor: pointer;
 
 }
 .listaBotoesGerenciamento{
@@ -459,10 +500,11 @@ body {
   background-color: #04AA6D;
   padding: 14px 20px;
   border: none;
+  cursor: pointer;
 
 }
 
-/* Fim da estilização da pagina gerenciar Jogos */
+/* Fim da estilização da página gerenciar Jogos */
 
 
 /* Inicio da estilização da pagina about */
@@ -542,9 +584,8 @@ body {
   margin-right: 35%;
   margin-left: 35%;
   border-radius:20vh;
-  
-}
 
+}
 
 .imgs-perfil img{
   width: 300px;
@@ -558,10 +599,58 @@ body {
 
 }
 
-.imgs-perfil:hover{
+/* Fim da estilização da página about */
+
+/* Inicio da estilização da pagina Contact */
+
+#contato{
+  padding: 3rem 10rem 3rem 10rem;
+  display: grid;
+  place-items: center;
   
- 
+}
+
+#contato form {
+  width: 40%;
+}
+
+#contato form input,
+    textarea {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1.2rem;
+    margin: 0 0 1em;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+#contato form label {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.h3{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.botao-contato{
+  align-items: center;
+  font-weight: bold;
+  margin: 2%;
+  margin-left: 40%;
+  color: #F1F1F2;
+  flex-direction: column;
+  width: 20%;
+  background-color: #04AA6D;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
 
 }
+
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

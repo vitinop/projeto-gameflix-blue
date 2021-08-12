@@ -38,9 +38,11 @@ body {
 
 }
 #logomarcaJogo img{
-    margin-left:10rem;
-    
-    height: 15rem;
+    margin-left: 7rem;
+    width: auto;
+    height: auto;
+    max-width:30rem;
+    max-height: 20rem;
 }
 .caixainformacoesJogos{
     display: flex;

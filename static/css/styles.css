@@ -475,6 +475,9 @@ body {
   font-size: 3vw;
   font-weight: 600;
   color:#F1F1F2;
+  border-radius:5vw;
+  margin-left: 5vh;
+  margin-right: 5vh;
   
 }
 
@@ -482,6 +485,7 @@ body {
   font-size: 1.5vw;
   color:#F1F1F2;
   text-justify: auto;
+  
 }
 
 #proj{
@@ -498,6 +502,9 @@ body {
   font-size: 2vw;
   font-weight: 600;
   color:#F1F1F2;
+  border-radius:60vh;
+  margin-left: 20%;
+  margin-right: 20%;
   
 }
 
@@ -516,9 +523,8 @@ body {
 
 .about-me{
   margin-left: 2vw;
-  margin-right: 2%;
+  margin-right: 2vw;
   color:#22a6b3;
-  background-color:#22a6b3
 
 }
 

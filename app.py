@@ -1,9 +1,10 @@
 from enum import unique
 from flask import Flask, render_template, request, redirect, session, flash
-from flask_mail import Mail, Message
+from flask_mail import  Mail, Message
 import flask
 from flask_mail import Mail, Message
 from flask_sqlalchemy import SQLAlchemy
+from tkinter import messagebox
 import sqlalchemy
 app = Flask(__name__)
 app.secret_key = 'bluedtech'
@@ -12,17 +13,19 @@ app.secret_key = 'bluedtech'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://lvuqxbop:NdMagrrxBtguNA5R0ymG2Igafdj6nWPK@tuffi.db.elephantsql.com/lvuqxbop'
 #instanciamento do banco de dados
 db = SQLAlchemy(app)
-app.config.update(mail_settings) #atualizar as configurações do app com o dicionário mail_settings
-mail = Mail(app) # atribuir a class Mail o app atual.
+
+
 
 mail_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": 'projetogameflix@gmail.com',
-    "MAIL_PASSWORD": 'G@meflixblue'
+    "MAIL_USERNAME": 'dorivalblueteste@gmail.com',
+    "MAIL_PASSWORD": 'Dorival96@rx'
 }
+app.config.update(mail_settings) #atualizar as configurações do app com o dicionário mail_settings
+mail = Mail(app) # atribuir a class Mail o app atual.
 
 class Contato:
    def __init__ (self, nome, email, mensagem):
@@ -75,6 +78,8 @@ class User(db.Model):
         self.userEmail = userEmail
         self.userCellphone = userCellphone
         self.birthUser = birthUser
+
+
         
 # criação da rota para inclusão das informações no BD         
 @app.route('/new', methods = ['GET', 'POST'])
@@ -95,6 +100,8 @@ def new():
         db.session.add(jogo)
         db.session.commit()
         return redirect('/cadastro-jogos')
+
+
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():
@@ -153,24 +160,26 @@ def newUser():
 
 @app.route('/editUsers')
 def editUser():
+    editUser = User.query.all()
     if session['usuario_logado'] == None or 'usuario_logado' not in session:
         flash('Você não esta logado')
         return redirect ('/login')
-    return render_template('/gerenciar-user.html')
+    return render_template('/gerenciar-user.html', editUser=editUser)
 
 @app.route('/editUser/<id>', methods = ['POST', 'GET'])
 def edit_User(id):
-    editUser = User.query.get(id)
+    editUser2 = User.query.get(id)
     if request.method == 'POST':
-        editUser.userName = request.form['userName']
-        editUser.userPassword = request.form['userPassword']
-        editUser.cpfUser = request.form['cpfUser']
-        editUser.userEmail = request.form['userEmail']
-        editUser.userCellphone = request.form['userCellphone']
-        editUser.birthUser = request.form['birthUser']
+        editUser2.userName = request.form['userName']
+        editUser2.userPassword = request.form['userPassword']
+        editUser2.cpfUser = request.form['cpfUser']
+        editUser2.userEmail = request.form['userEmail']
+        editUser2.userCellphone = request.form['userCellphone']
+        editUser2.birthUser = request.form['birthUser']
         db.session.commit()
         return redirect('/editUsers')
-    return render_template('/gerenciar-user.html', editUser = editUser)
+
+    return render_template('/gerenciar-user.html', editUser2 = editUser2)
 
 @app.route('/auth', methods = ['POST','GET'])
 def auth():
@@ -184,10 +193,7 @@ def auth():
         return redirect ('/login')
 
 
-@app.route('/about')
-def about():
-    session['usuario_logado'] = None
-    return render_template('/about.html')
+
 
 
 @app.route('/cadastro-jogos')
@@ -249,7 +255,8 @@ def todos_jogos():
     return render_template('/todos-jogos.html', jogos=jogos)
 
 @app.route('/about')
-def aboutUs():
+def about():
+    session['usuario_logado'] = None
     return render_template('/about.html')
 
 

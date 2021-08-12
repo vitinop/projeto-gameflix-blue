@@ -19,6 +19,7 @@
   </div>
 
   <!--MAIN CONTENT-->
+  {% if editUser2 == undefined %}
   <div class="addNovoTituloBotao"><a href="/cadastro" class="botaoTitle">ADICIONAR NOVO USUÁRIO </a><br><br></div>
 
   <table class="tabela">
@@ -37,86 +38,96 @@
     </thead>
     <tbody>
       <!-- for para exibição em tabela dos jogos cadastrados dentro do BD -->
-      {% for p in jogos %}
+      {% for p in editUser %}
       <tr class="tabela_conteudo">
         <td id="tableIdContent">{{p.id}}</td>
-        <td id="tableUserNameContent">{{p.username}}</td>
-        <td id="tableCpfContent">{{p.usercpf}}</td>
-        <td id="tableBirthContent">{{p.userbirth}}</td>
-        <td id="tableMailContent">{{p.usermail}}</td>
-        <td id="tablePhoneContent">{{p.userphone}}</td>
-        <td id="tablePasswordContent">{{p.userpassword}}</td>
+        <td id="tableUserNameContent">{{p.userName}}</td>
+        <td id="tableCpfContent">{{p.cpfUser}}</td>
+        <td id="tableBirthContent">{{p.birthUser}}</td>
+        <td id="tableMailContent">{{p.userEmail}}</td>
+        <td id="tablePhoneContent">{{p.userCellphone}}</td>
+        <td id="tablePasswordContent">{{p.userPassword}}</td>
         <td>
           <ul class="listaBotoesGerenciamento">
-            <li><a href="/delete/{{p.id}}" class="botaoTool">REMOVER</br><img src="/static/img/trash.png"
-                  alt="Ícone de exclusão"></a></li>
+            <li><a href="#" class="botaoTool">REMOVER</br><img src="/static/img/trash.png" alt="Ícone de exclusão"></a>
+            </li>
             </br>
-            <li><a href="/edit/{{p.id}}" class="botaoTool">EDITAR</br><img src="/static/img/edit.png"
+            <li><a href="/editUser/{{p.id}}" class="botaoTool">EDITAR</br><img src="/static/img/edit.png"
                   alt="Ícone de edição"></a></li>
           </ul>
         </td>
       </tr>
       {% endfor %}
     </tbody>
-    <!-- Formulario de edição  -->
-    {% if jogosEdit != undefined %}
-
-    <form action="/editUser" method="POST">
-      <div class="infoUser">
-
-        <div id="nomeUserAdd">
-          <p>Nome</p>
-          <input type="text" placeholder="Nome completo" name="userName" id="UserName" required>
-        </div>
-
-        <div id="cpfUserAdd">
-          <p>CPF do Usuário</p>
-          <input type="number" placeholder="CPF do Usuário" name="cpfUser" id="cpfUser" required>
-        </div>
-
-        <div id="emailUserAdd">
-          <p>E-mail</p>
-          <input type="email" placeholder="ex:  e-mail@gmail.com" name="userEmail" id="userEmail" required>
-        </div>
-
-        <div id="celularUserAdd">
-          <p>Celular</p>
-          <input type="number" placeholder="ex: (99)99999-9999" name="userCellphone" id="userCellphone" required>
-        </div>
-
-        <div id="birthUserAdd">
-          <p>Nascimento</p>
-          <input type="date" placeholder="Data Nascimento" name="birthUser" id="birthUser" required>
-        </div>
-
-
-        <div id="passwordUserAdd">
-          <p>Senha</p>
-          <input type="password" placeholder="Senha" name="userPassword" id="userPassword" required>
-          <br><br>
-          <p>Confirmar Senha</p>
-          <input type="password" placeholder="Confirme sua Senha" name="confirmUserPassword" id="confirmUserPassword"
-            required>
-        </div>
-
-      </div>
-
-    </form>
-
-    </div>
-    <button type="submit" id="botao-aplicar-edicao">Aplicar mudanças no usuário</button>
-    <button a href="/gerenciar-jogos" id="botao-editando-cancel">Cancelar</button>
-    </form>
-
-    </div>
-
-    </form>
-    {% endif %}
-
 
 
   </table>
-  
+  {% endif %}
+
+
+  <!-- Formulario de edição  -->
+  {% if editUser2 != undefined %}
+
+  <form action="/editUser/{{editUser2.id}}" method="POST">
+    <div class="infoUser">
+
+      <div id="nomeUserAdd">
+        <p>Nome</p>
+        <input type="text" placeholder="Nome completo" name="userName" id="UserName" value="{{editUser2.userName}}"
+          required>
+      </div>
+
+      <div id="cpfUserAdd">
+        <p>CPF do Usuário</p>
+        <input type="number" placeholder="CPF do Usuário" name="cpfUser" id="cpfUser" value="{{editUser2.cpfUser}}"
+          required>
+      </div>
+
+      <div id="emailUserAdd">
+        <p>E-mail</p>
+        <input type="email" placeholder="ex:  e-mail@gmail.com" name="userEmail" id="userEmail"
+          value="{{editUser2.userEmail}}" required>
+      </div>
+
+      <div id="celularUserAdd">
+        <p>Celular</p>
+        <input type="number" placeholder="ex: (99)99999-9999" name="userCellphone" id="userCellphone"
+          value="{{editUser2.userCellphone}}" required>
+      </div>
+
+      <div id="birthUserAdd">
+        <p>Nascimento</p>
+        <input type="date" placeholder="Data Nascimento" name="birthUser" id="birthUser" value="{{editUser2.birthUser}}"
+          required>
+      </div>
+
+
+      <div id="passwordUserAdd">
+        <p>Senha</p>
+        <input type="password" placeholder="Senha" name="userPassword" id="userPassword"
+          value="{{editUser2.userPassword}}" required>
+        <br><br>
+        <p>Confirmar Senha</p>
+        <input type="password" placeholder="Confirme sua Senha" name="confirmUserPassword" id="confirmUserPassword"
+        value="{{editUser2.userPassword}}" required>
+      </div>
+
+    </div>
+
+    <button type="submit" id="botao-aplicar-edicao">Aplicar mudanças no usuário</button>
+
+    <button a href="/editUsers" id="botao-editando-cancel">Cancelar</button>
+  </form>
+  {% endif %}
+
+
+
+
+
+
+
+
+
 
 
   <!--FOOTER CONTENT-->

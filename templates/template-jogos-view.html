@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gameflix | {% for p in jogos %} {{p.nomeJogo}} {% endfor %} </title>
+    <!-- <title>Gameflix |  {{templateJogos.nomeJogo}}  </title> -->
     <link rel="shortcut icon" href="../static/img/favicon.ico">
     <link rel="stylesheet" href="../static/css/template-jogos-style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,33 +19,44 @@
     <div id="nav"></div>
 
     <!-- MAIN CONTENT -->
+    
     <div class="viewJogo">
-        {% for a in jogos %}
-        <div><iframe src="{{a.trailler}}" title="YouTube video player" frameborder="0"
+        
+        <div><iframe src="{{templateJogos.trailler}}" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
         </div>
         <div class="caixainformacoesJogos">
-            <img src="{{a.logoLink}}"
-                alt="Ícone do jogo {{p.nomeJogo}}">
+            <img src="{{templateJogos.logoLink}}"
+                alt="Ícone do jogo {{templateJogos.nomeJogo}}">
             
             <div class="subCaixainformacoes">
-                <p>{{a.descricao}}</p>
+                <p>Age of Empires III - Definitive Edition é uma versão remasterizada pela Microsoft do clássico título
+                    de estratégia Age of Empires 3, lançado originalmente em 2005.
+                    Produzida pelo Xbox Game Studios em uma parceria com as desenvolvedoras Tantalus Media e Forgotten
+                    Empires,
+                    a nova versão reúne todas as DLCs e traz diversas melhorias na jogabilidade do game.</p>
 
                 
                 <hr>
                 <ul>
-                    <li>Nome do títulos: {{a.nomeJogo}}</li>
-                    <li>Classificação indicativa: {{a.classificacao}}</li>
-                    <li>Nota Metacritic: {{a.notaMetric}}</li>
-                    <li>Gênero: {{a.genero}}</li>
-                    <li>Lançamento:{{a.dataLancamento}}</li>
-                    <li>Produtora: {{a.produtora}}</li>
+                    <li>Nome do títulos: {{templateJogos.nomeJogo}}</li>
+                    <li>Classificação indicativa: {{templateJogos.classificacao}}</li>
+                    <li>Nota Metacritic: {{templateJogos.notaMetric}}</li>
+                    <li>Gênero: {{templateJogos.genero}}</li>
+                    <li>Lançamento:{{templateJogos.dataLancamento}}</li>
+                    <li>Produtora: {{templateJogos.produtora}}</li>
+                </ul>
+                <ul>
+                <li><a class="botaoGames">Jogar!</br><img src="/static/img/play.png"alt="Ícone de Jogar"></a></li>
+                <li><a href="adicionar tag home page" class="botaoGames">Voltar</br><img src="/static/img/back.png" alt="Ícone de Voltar"></a></li>
                 </ul>
             </div>
 
         </div>
+        
     </div>
+    
 
 
 

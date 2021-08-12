@@ -263,14 +263,14 @@ def about():
 def contato():
     return render_template('/')
 
-@app.route('/template-jogos')
+@app.route('/template-jogos', methods = ['POST','GET'])
 def template_jogos():
     return render_template('/template-jogos-view.html')
 
 @app.route('/template-jogos/<id>')
-def jogo(id):
-    jogos = Info_jogos.query.get(id)
-    return render_template('/template-jogos-view.html', jogos=jogos)
+def jogos(id):
+    templateJogos = Info_jogos.query.get(id)
+    return render_template('/template-jogos-view.html', templateJogos = templateJogos)
 
 
 if __name__ == '__main__':

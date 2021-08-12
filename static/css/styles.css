@@ -570,14 +570,15 @@ body {
 #botao-contato {
   align-items: center;
   font-weight: bold;
-  margin: 1%;
+  margin: 2%;
   margin-left: 40%;
   color: #F1F1F2;
-  width: 80%;
+  flex-direction: column;
+  width: 20%;
   background-color: #04AA6D;
   padding: 14px 20px;
   border: none;
-  cursor: pointer;
+  cursor: pointer;;
 }
 
 #botao-contato:hover {

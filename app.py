@@ -20,7 +20,7 @@ mail_settings = {
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": 'projetogameflix',
+    "MAIL_USERNAME": 'projetogameflix@gmail.com',
     "MAIL_PASSWORD": 'G@meflixblue'
 }
 

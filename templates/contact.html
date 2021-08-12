@@ -21,7 +21,7 @@
         <img src="/static/img/logomarca.svg" alt="Logomarca Gameflix">
     </div>
     <!--MAIN CONTENT-->
-    <form action="/newUser" method="POST">
+    <form action="/" method="POST"> 
         <div class="infoUser">
 
             <div id="nomeUserAdd">
@@ -29,7 +29,7 @@
                 <input type="text" placeholder="Nome completo" name="userName" id="UserName" required>
             </div>
 
-            <div id="emailUserAdd">
+            <div id="email-contato">
                 <p>E-mail</p>
                 <input type="email" placeholder="ex:  e-mail@gmail.com" name="userEmail" id="userEmail" required>
             </div>
@@ -38,10 +38,12 @@
                 <p>Celular</p>
                 <input type="number" placeholder="ex: (99)99999-9999" name="userCellphone" id="userCellphone" required>
             </div>
-            <div>
-                <label for="mensagem">Mensagem</label>
-                <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
-            </div>
+            
+        </div>
+
+        <div id="msg">
+            <label id="msg-2"for="mensagem">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" cols="20" rows="10" placeholder="Digite sua mensagem"></textarea>
         </div>
         <button type="submit" id="botao-contato">Enviar</button>
 

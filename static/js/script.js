@@ -24,10 +24,10 @@ foot.innerHTML =
 `<div class="footer-basic">
 <footer>
   <ul class="list-inline-footer">
-    <li class="list-inline-item"><a href="#">Contato</a></li>
+    <li class="list-inline-item"><a href="/contact">Contato</a></li>
     <li class="list-inline-item"><a href="/about">Sobre</a></li>
-    <li class="list-inline-item"><a href="#">Mapa do Site</a></li>
-    <li class="list-inline-item"><a href="#">Termos de Uso</a></li>
+    <li class="list-inline-item"><a href="">Mapa do Site</a></li>
+    <li class="list-inline-item"><a href="">Termos de Uso</a></li>
   </ul>
   <hr>
   <p class="copyright">©2021 GAMEFLIX, INC. TODOS OS DIREITOS RESERVADOS.<br>Todas as marcas registradas mencionadas

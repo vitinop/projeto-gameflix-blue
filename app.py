@@ -28,10 +28,39 @@ app.config.update(mail_settings) #atualizar as configurações do app com o dici
 mail = Mail(app) # atribuir a class Mail o app atual.
 
 class Contato:
-   def __init__ (self, nome, email, mensagem):
+   def __init__ (self, nome, email, mensagem, userCellphone):
       self.nome = nome
       self.email = email
       self.mensagem = mensagem
+      self.userCellphone = userCellphone  
+
+@app.route('/contact')
+def contact():
+    return render_template('/contact.html')      
+
+@app.route('/send', methods=['GET', 'POST'])
+def send():
+   if request.method == 'POST':
+      # Capturando as informações do formulário com o request do Flask e criando o objeto formContato
+        formContato = Contato(
+            request.form['userName'],
+            request.form['userEmail'],
+            request.form['userCellphone'],
+            request.form['mensagem']
+         )
+      # Criando o objeto msg, que é uma instancia da Class Message do Flask_Mail
+        msg = Message(
+         subject= 'Contato do seu Portfólio', #Assunto do email
+         sender=app.config.get("MAIL_USERNAME"), # Quem vai enviar o email, pega o email configurado no app (mail_settings)
+         recipients=[app.config.get("MAIL_USERNAME")], # Quem vai receber o email, mando pra mim mesmo, posso mandar pra mais de um email.
+         # Corpo do email.
+         body=f'''O {formContato.nome} com o email {formContato.email} com o Cellfone {formContato.userCellphone}, te mandou a seguinte mensagem: 
+         
+               {formContato.mensagem} 
+               ''' 
+            )
+        mail.send(msg) #envio efetivo do objeto msg através do método send() que vem do Flask_Mail
+        return render_template('contact.html', formContato=formContato) # Renderiza a página de confirmação de envio.
 
 #criação da classe e criação das colunas do banco de dados
 class Info_jogos(db.Model):
@@ -103,27 +132,7 @@ def new():
 
 
 
-@app.route('/send', methods=['GET', 'POST'])
-def send():
-   if request.method == 'POST':
-      # Capturando as informações do formulário com o request do Flask e criando o objeto formContato
-        formContato = Contato(
-            request.form['nome'],
-            request.form['email'],
-            request.form['mensagem']
-         )
-      # Criando o objeto msg, que é uma instancia da Class Message do Flask_Mail
-        msg = Message(
-         subject= 'Contato do seu Portfólio', #Assunto do email
-         sender=app.config.get("MAIL_USERNAME"), # Quem vai enviar o email, pega o email configurado no app (mail_settings)
-         recipients=[app.config.get("MAIL_USERNAME")], # Quem vai receber o email, mando pra mim mesmo, posso mandar pra mais de um email.
-         # Corpo do email.
-         body=f'''O {formContato.nome} com o email {formContato.email}, te mandou a seguinte mensagem: 
-         
-               {formContato.mensagem}''' 
-            )
-        mail.send(msg) #envio efetivo do objeto msg através do método send() que vem do Flask_Mail
-        return render_template('contato.html', formContato=formContato) # Renderiza a página de confirmação de envio.
+
 
 #criação da rota da página index 
 @app.route('/')
@@ -271,6 +280,7 @@ def template_jogos():
 def jogos(id):
     templateJogos = Info_jogos.query.get(id)
     return render_template('/template-jogos-view.html', templateJogos = templateJogos)
+
 
 
 if __name__ == '__main__':

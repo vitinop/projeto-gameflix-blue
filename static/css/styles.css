@@ -516,7 +516,9 @@ body {
 
 .about-me{
   margin-left: 2vw;
+  margin-right: 2%;
   color:#22a6b3;
+  background-color:#22a6b3
 
 }
 
@@ -532,8 +534,7 @@ body {
   margin-top: 4px;
   margin-right: 35%;
   margin-left: 35%;
-
-  /* border-radius: 90%; */
+  border-radius:20vh
 }
 
 
@@ -548,8 +549,10 @@ body {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 }
+
 .imgs-perfil:hover{
-  cursor:pointer;
+  
+ 
 
 }
 

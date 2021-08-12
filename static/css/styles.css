@@ -16,6 +16,7 @@ body {
 }
 
 /* Inicio da Estilização da pagina de Login */
+
 /* Logomarca do topo - alinhamento e tamanho  */
 
 .logomarca img {
@@ -267,7 +268,8 @@ body {
 
 
 
-/*Inicio da Estilização de botão cadastrar  da Pag de cadastro de novos usuarios */
+/*Inicio da Estilização de botão cadastrar  da Pag de cadastro de novos usuários */
+
 /* Estilização das caixas de input, usando modelo grid  */
 .infoUser {
   display: grid;
@@ -576,8 +578,6 @@ body {
 #botao-contato:hover {
   opacity: 0.9;
 }
-
-
 
 
 

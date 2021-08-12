@@ -34,7 +34,7 @@ body {
   padding: 0.5rem 0.6rem;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid #771e1e;
   box-sizing: border-box;
   font-size: 1.1rem;
   font-weight: bold;
@@ -603,39 +603,41 @@ body {
 
 /* Inicio da estilização da pagina Contact */
 
-#contato{
+.contato{
   padding: 3rem 10rem 3rem 10rem;
   display: grid;
   place-items: center;
   
 }
 
-#contato form {
+.contato form {
   width: 40%;
 }
 
-#contato form input,
-    textarea {
+.contato form input,
+textarea {
     width: 100%;
     padding: 0.5em;
     font-size: 1.2rem;
     margin: 0 0 1em;
-    border: 1px solid #ccc;
+    border: 1px solid #771e1e;
     outline: none;
 }
 
-#contato form label {
+.contato form label {
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+
 }
 
 .h3{
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    color:#f2f0ff;
 }
 
-.botao-contato{
+#botao-contato{
   align-items: center;
   font-weight: bold;
   margin: 2%;

@@ -21,32 +21,33 @@
         <img src="/static/img/logomarca.svg" alt="Logomarca Gameflix">
     </div>
     <!--MAIN CONTENT-->
-    <form action="/" method="POST"> 
-        <div class="infoUser">
+    <form action="/" method="POST">
+        <div class="contato">
 
-            <div id="nomeUserAdd">
+            <div id="nomeContato">
                 <p>Nome</p>
                 <input type="text" placeholder="Nome completo" name="userName" id="UserName" required>
             </div>
 
-            <div id="email-contato">
+            <div id="emailContato">
                 <p>E-mail</p>
                 <input type="email" placeholder="ex:  e-mail@gmail.com" name="userEmail" id="userEmail" required>
             </div>
-            
-            <div id="celularUserAdd">
+
+            <div id="celularContato">
                 <p>Celular</p>
                 <input type="number" placeholder="ex: (99)99999-9999" name="userCellphone" id="userCellphone" required>
             </div>
-            
-        </div>
 
-        <div id="msg">
-            <label id="msg-2"for="mensagem">Mensagem</label>
-            <textarea name="mensagem" id="mensagem" cols="20" rows="10" placeholder="Digite sua mensagem"></textarea>
-        </div>
-        <button type="submit" id="botao-contato">Enviar</button>
 
+
+            <div id="msg">
+                <label id="msg-2" for="mensagem">Mensagem</label><br>
+                <textarea style="resize: none" name="mensagem" id="mensagem" cols="20" rows="10"
+                    placeholder="Digite sua mensagem..."></textarea>
+            </div>
+            <button type="submit" id="botao-contato">Enviar Mensagem</button>
+        </div>
     </form>
 
     <!--FOOTER CONTENT-->

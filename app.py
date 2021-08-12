@@ -241,7 +241,7 @@ def deletegame(id):
     jogos = Info_jogos.query.get(id)
     db.session.delete(jogos)
     db.session.commit()
-    return redirect('/gerenciar-jogos.html')
+    return redirect('/gerenciar-jogos')
 
 
 

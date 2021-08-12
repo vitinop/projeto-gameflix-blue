@@ -65,6 +65,7 @@ body {
   margin-left: 25%;
   border: none;
   width: 30%;
+  cursor: pointer;
 }
 
 /* Estilização ao passar o mouse sobre os botões da caixa central principal */
@@ -217,7 +218,9 @@ body {
   background-color: #04AA6D;
   padding: 14px 20px;
   border: none;
+  cursor: pointer;
 }
+
 #botao-cadastro:hover {
 
   opacity: 0.9;
@@ -235,7 +238,9 @@ body {
   background-color: #04AA6D;
   padding: 14px 20px;
   border: none;
+  cursor: pointer;
 }
+
 #botao-aplicar-edicao:hover {
 
   opacity: 0.9;
@@ -249,6 +254,7 @@ body {
   background-color: #f30000;
   padding: 14px 20px;
   border: none;
+  cursor: pointer;
 
 }
 #botao-editando-cancel:hover {
@@ -324,6 +330,7 @@ body {
   background-color: #04AA6D;
   padding: 14px 20px;
   border: none;
+  cursor: pointer;
 }
 #botaoRegistroUser:hover {
 
@@ -421,6 +428,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  cursor: pointer;
 
 }
 .listaBotoesGerenciamento{
@@ -492,10 +500,11 @@ body {
   background-color: #04AA6D;
   padding: 14px 20px;
   border: none;
+  cursor: pointer;
 
 }
 
-/* Fim da estilização da pagina gerenciar Jogos */
+/* Fim da estilização da página gerenciar Jogos */
 
 
 /* Inicio da estilização da pagina about */
@@ -589,5 +598,59 @@ body {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 }
+
+/* Fim da estilização da página about */
+
+/* Inicio da estilização da pagina Contact */
+
+#contato{
+  padding: 3rem 10rem 3rem 10rem;
+  display: grid;
+  place-items: center;
+  
+}
+
+#contato form {
+  width: 40%;
+}
+
+#contato form input,
+    textarea {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1.2rem;
+    margin: 0 0 1em;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+#contato form label {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.h3{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.botao-contato{
+  align-items: center;
+  font-weight: bold;
+  margin: 2%;
+  margin-left: 40%;
+  color: #F1F1F2;
+  flex-direction: column;
+  width: 20%;
+  background-color: #04AA6D;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+
+}
+
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;900&display=swap');

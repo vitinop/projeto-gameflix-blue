@@ -190,6 +190,17 @@ def edit_User(id):
 
     return render_template('/gerenciar-user.html', editUser2 = editUser2)
 
+@app.route('/deleteUser/<id>') 
+def delete(id):
+    if session['usuario_logado'] == None or 'usuario_logado' not in session:
+        flash('Você não esta logado')
+        return redirect ('/login')
+    deleteUser = User.query.get(id)
+    db.session.delete(deleteUser)
+    db.session.commit()
+    return redirect('/editUsers')
+
+
 @app.route('/auth', methods = ['POST','GET'])
 def auth():
     user = User.query.all()
@@ -223,7 +234,7 @@ def adm_gerenciar_jogos():
 
 
 @app.route('/delete/<id>') 
-def delete(id):
+def deletegame(id):
     if session['usuario_logado'] == None or 'usuario_logado' not in session:
         flash('Você não esta logado')
         return redirect ('/login')

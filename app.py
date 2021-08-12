@@ -4,7 +4,7 @@ from flask_mail import  Mail, Message
 import flask
 from flask_mail import Mail, Message
 from flask_sqlalchemy import SQLAlchemy
-from tkinter import messagebox
+
 import sqlalchemy
 app = Flask(__name__)
 app.secret_key = 'bluedtech'
